@@ -10,3 +10,7 @@
   --black: #343434;
   --dark-black: #252525;
 }
+
+html {
+  font-family: var(--montserrat);
+}
