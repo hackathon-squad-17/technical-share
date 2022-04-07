@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --montserrat: 'Montserrat', sans-serif;
+  --light-primary: #FE885C;
+  --primary: #FF4500;
+  --dark-primary: #B93200;
+  --light-white: #FFF;
+  --white: #FAFAFA;
+  --dark-white: #F4F4F4;
+  --light-black: #555;
+  --black: #343434;
+  --dark-black: #252525;
+}
