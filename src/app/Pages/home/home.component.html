@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main>
   <section class="intro">
-    <div class="title">
+    <div class="intro-title">
       <h1>A Technical Share é uma plataforma de <b>conexão</b> e troca de <b>conhecimento</b>.</h1>
       <button>Encontre Consultores</button>
     </div>
@@ -9,6 +9,30 @@
       <img src="assets/card-home.png">
     </div>
   </section>
+
+  <section class="how-it-works">
+    <div class="how-it-works-title">
+      <img src="assets/detalhe-titulo.png">
+      <h2>Novo por aqui? <span>Entenda como funciona</span></h2>
+    </div>
+    <div class="cards">
+      <div class="card" *ngFor="let card of cards">
+        <span class="material-icons">
+          {{card.icon}}
+        </span>
+        <p>{{card.text}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mentoring">
+    <div class="mentoring-title">
+      <h2>Vamos subir cada degrau juntos. <span>Seja um um mentor. Seja mentorado.</span></h2>
+      <img src="assets/img-escada.png">
+    </div>
+
+  </section>
+
 </main>
 
 

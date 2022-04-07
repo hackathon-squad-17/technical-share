@@ -1,3 +1,5 @@
+/* INTRO SECTION */
+
 .intro {
   width: 100%;
   display: flex;
@@ -6,7 +8,7 @@
   justify-content: space-between;
 }
 
-.title {
+.intro-title {
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -37,4 +39,72 @@ b {
 
 .main-img img{
   width: 670px;
+}
+
+
+/* HOW IT WORKS SECTION */
+
+.how-it-works-title {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h2 span {
+  color: var(--primary);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  gap: 30px;
+}
+
+.card {
+  width: 440px;
+  height: 440px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  gap: 44px;
+  color: var(--black);
+  box-shadow: 5px 12px 18px (255, 206, 188, 0.2);
+}
+
+.card span {
+  font-size: 94px;
+  color: var(--primary);
+}
+
+.card p {
+  width: 140px;
+  text-align: center;
+}
+
+/* MENTORING SECTION */
+.mentoring-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mentoring-title h2 {
+  margin: 6rem auto;
+}
+
+.mentoring-title img {
+  align-self: center;
 }
