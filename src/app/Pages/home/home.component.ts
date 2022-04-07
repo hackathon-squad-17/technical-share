@@ -20,6 +20,14 @@ export class HomeComponent implements OnInit {
       text: 'Tire suas dúvidas'
     }
   ];
+
+  logos = [
+    'glassdoor-logo',
+    'youtube-logo',
+    'linkedin-logo',
+    'facebook-logo',
+    'instagram-logo',
+  ]
   constructor() { }
 
   ngOnInit(): void {

@@ -6,13 +6,13 @@
       <button>Encontre Consultores</button>
     </div>
     <div class="main-img">
-      <img src="assets/card-home.png">
+      <img src="assets/img/card-home.png">
     </div>
   </section>
 
   <section class="how-it-works">
     <div class="how-it-works-title">
-      <img src="assets/detalhe-titulo.png">
+      <img src="assets/img/detalhe-titulo.png">
       <h2>Novo por aqui? <span>Entenda como funciona</span></h2>
     </div>
     <div class="cards">
@@ -28,11 +28,37 @@
   <section class="mentoring">
     <div class="mentoring-title">
       <h2>Vamos subir cada degrau juntos. <span>Seja um um mentor. Seja mentorado.</span></h2>
-      <img src="assets/img-escada.png">
+      <img src="assets/img/img-escada.png">
     </div>
+    <div class="mentoring-content">
+      <div class="button-wrapper">
+        <p><b>Tem vontade de ensinar?</b> Aprenda enquanto mentora outros consultores da FCamara. Aqui você encontra profissionais dispostos a te ouvir.</p>
+        <button>Conheça a plataforma</button>
 
+      </div>
+      <div class="vertical-line"></div>
+      <p><b>Tem alguma dúvida? </b>Na Technical Share você encontra todos os consultores da FCamara e tem a oportunidade de agendar mentorias. </p>
+    </div>
   </section>
 
+  <section class="fcamara container">
+    <img src="assets/img/fcamara-logo.png">
+    <p>Somos responsáveis por uma cultura única que agrega valor para nossos clientes através de células ágeis, squads e IT outsourcing. É esta responsabilidade que facilita o desenvolvimento de soluções sob experimentações constantes centradas em dados e promove transformação cultural, digital e cognitiva, impactando em cada aspecto de uma empresa. </p>
+    <p>Unindo time, cultura e método, criamos soluções customizadas e escaláveis para inovar em produtos e serviços com a utilização de metodologias ágeis. Atuamos no desenvolvimento de aplicativos, plataformas e integrações, com conhecimento do negócio, gestão enxuta, AI, IoT, nuvem, blockchain, entre outros.</p>
+  </section>
+
+  <section class="technical-share container">
+    <h2>Technical <span>Share</span></h2>
+    <p>A Technical Share é uma plataforma onde você encontra pessoas da tecnologia com conhecimentos diversos para tirar dúvidas sobre a sua área ou te orientar no aprendizado de novas habilidades.</p>
+
+    <p>Ainda é possível se conectar com todos os consultores da FCamara fazendo networking ou trocando experiências.</p>
+  </section>
 </main>
+
+<footer>
+  <div *ngFor="let logo of logos">
+    <img src="assets/img/{{logo}}.png">
+  </div>
+</footer>
 
 

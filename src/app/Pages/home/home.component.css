@@ -27,7 +27,7 @@ b {
   font-weight: 600;
 }
 
-.intro button {
+button {
   width: 280px;
   color:var(--light-white);
   border: none;
@@ -35,6 +35,11 @@ b {
   border-radius: 10px;
   padding: 8px 12px;
   font-size: 24px;
+}
+
+button:hover {
+  background-color: #ff4400cd;
+  transition: 1s
 }
 
 .main-img img{
@@ -46,7 +51,7 @@ b {
 
 .how-it-works-title {
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -69,11 +74,12 @@ h2 span {
   align-items: center;
   background-color: var(--white);
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 440px;
-  height: 440px;
+  height: 414px;
   font-size: 24px;
   display: flex;
   justify-content: center;
@@ -81,7 +87,8 @@ h2 span {
   border: none;
   gap: 44px;
   color: var(--black);
-  box-shadow: 5px 12px 18px (255, 206, 188, 0.2);
+  box-shadow: 5px 12px 18px rgba(255,69,0, 0.07);
+  border-radius: 36px;
 }
 
 .card span {
@@ -102,9 +109,76 @@ h2 span {
 }
 
 .mentoring-title h2 {
-  margin: 6rem auto;
+  align-self: center;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 
 .mentoring-title img {
   align-self: center;
+}
+
+.mentoring-content {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.mentoring-content p {
+  width: 613px;
+}
+
+.vertical-line {
+  height: 178px;
+  width: 1px;
+  background-color: var(--black);
+}
+
+.button-wrapper button {
+  position: absolute;
+  margin-top: 3em;
+}
+
+/* FCAMARA SECTION */
+
+.container {
+  margin: 5rem;
+}
+
+.fcamara {
+  margin-top: 20rem;
+  font-size: 24px;
+}
+
+.fcamara img {
+  margin-bottom: 4rem;
+}
+
+/* TECHNICAL SHARE SECTION */
+.technical-share span {
+  font-weight: 700;
+}
+
+.technical-share h2 {
+  margin-bottom: 3rem;
+  margin-top: 9rem;
+}
+
+.technical-share p {
+  font-size: 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  margin: 15rem 3rem 3rem 3rem;
+}
+
+footer img {
+  width: 44px;
+  cursor: pointer;
 }
