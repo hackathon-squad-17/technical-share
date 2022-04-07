@@ -182,3 +182,8 @@ footer img {
   width: 44px;
   cursor: pointer;
 }
+
+footer img:hover {
+  filter: saturate(220%);
+  transition: .5s;
+}

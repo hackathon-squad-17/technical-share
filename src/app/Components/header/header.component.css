@@ -29,11 +29,24 @@ ul li {
   gap: 4rem;
 }
 
-.header-wrapper:last-of-type ul li:hover {
-  background-color: #fff3ef;
+.header-wrapper:last-of-type ul li:last-of-type {
+  background-color: #FEFEFE;
   border: 1px solid var(--light-primary);
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 2px 24px;
   margin: -3px -25px;
+}
+
+.header-wrapper:last-of-type ul li:hover {
+  border-bottom: 3px solid var(--light-primary);
+  margin-bottom: -3px;
+  transition: .2s;
+
+}
+
+.header-wrapper:last-of-type ul li:last-of-type:hover {
+  border-bottom: 1px solid var(--light-primary);
+  margin-bottom: -3px;
+  background-color: #fff3ef;
   transition: 0.5s background-color;
 }
