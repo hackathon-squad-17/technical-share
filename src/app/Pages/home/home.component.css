@@ -1,4 +1,7 @@
 /* INTRO SECTION */
+main {
+  background-color: white;
+}
 
 .intro {
   width: 100%;
@@ -86,8 +89,9 @@ h2 span {
   align-items: center;
   border: none;
   gap: 44px;
+  background-color: white;
   color: var(--black);
-  box-shadow: 5px 12px 18px rgba(255,69,0, 0.07);
+  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
   border-radius: 36px;
 }
 
@@ -119,16 +123,16 @@ h2 span {
 }
 
 .mentoring-content {
-  font-size: 24px;
+  font-size: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-top: 100px;
+  margin-top: 96px;
 }
 
 .mentoring-content p {
-  width: 613px;
+  width: 520px;
 }
 
 .vertical-line {

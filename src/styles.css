@@ -9,10 +9,52 @@
   --light-black: #555;
   --black: #343434;
   --dark-black: #252525;
+  --secondary: #36357E;
 }
 
 html {
   font-family: var(--montserrat);
   background-color: var(--white);
-  
+
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-nav {
+  display: flex;
+}
+
+.owl-theme .owl-nav .owl-next,
+.owl-theme .owl-nav .owl-prev {
+  width: 50px;
+  height: 50px;
+  display: block;
+  font-size: 120px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  background: transparent;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.owl-theme .owl-nav .owl-next{
+  right: 10px;
+}
+
+.owl-theme .owl-nav .owl-prev {
+  left: -5px;
+}
+
+.owl-theme .owl-nav .owl-prev:hover,
+.owl-theme .owl-nav .owl-next:hover {
+  background-color: transparent;
+  color: var(--primary);
+  transition: 1s;
+  margin: 0;
+  padding: 0;
+  width: 50px;
 }
