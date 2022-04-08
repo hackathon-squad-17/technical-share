@@ -2,33 +2,25 @@
   position: relative;
   z-index: 2;
   height: 100%;
-  margin-top: 2rem;
-  margin-right: 1rem;
-}
-
-.blur{
-  position: absolute;
-  height: 42%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 149, 110, 0.2) ;
-  backdrop-filter: blur(6px);
+  margin: 2rem 1rem;
 }
 
 .img-wrapper img {
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 .info-wrapper {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0 20px;
+  padding: 20px;
   z-index: 2;
-  color: var(--white);
+  color: black;
   font-weight: 300;
   width: 100%;
+  background-color: white;
+  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  border-radius: 0 0 16px 16px;
 }
 
 h4 {
@@ -46,11 +38,11 @@ h4 {
 .info-wrapper .skills {
   display: inline-block;
   padding: 4px 15px;
-  border-radius: 8px;
+  border-radius: 16px;
   margin: 5px 8px 5px 0;
   height: 100%;
-  background-color: var(--secondary);
-  color: var(--white);
+  background-color: #EBEBF2;
+  color: var(--secondary);
 }
 
 .info-wrapper .links {
@@ -62,24 +54,31 @@ h4 {
 
 }
 
-.info-wrapper .links p {
+.info-wrapper .links p,
+.info-wrapper .links span {
   cursor: pointer;
+}
+.info-wrapper .links p{
+  font-weight: 600;
 }
 
 .info-wrapper .links p:first-of-type:hover{
   text-decoration: underline;
 }
 
-.info-wrapper .links p:last-of-type {
+.info-wrapper .links span {
   background-color: var(--primary);
-  border-radius: 10px;
+  border-radius: 16px;
   border: 1px solid var(--light-primary);
-  padding: 4px 8px;
   color: var(--white);
   font-weight: 600;
+  height: 35px;
+  vertical-align: middle;
+  margin: 0;
+  padding: 5px 20px;
 }
 
-.info-wrapper .links p:last-of-type:hover {
+.info-wrapper .links span:hover {
   background-color: var(--light-primary);
   transition: 1s;
 }
