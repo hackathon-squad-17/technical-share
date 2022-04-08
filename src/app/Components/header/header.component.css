@@ -1,12 +1,22 @@
 header {
-  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--light-primary);
   font-weight: 600;
   font-size: 24px;
-  background-color: #FEFEFE
+  background-color: #FEFEFE;
+  margin-top: 2rem;
+}
+
+h1 {
+  color: black;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+span {
+  color: var(--primary);
 }
 
 ul {
@@ -19,9 +29,6 @@ ul li {
   cursor: pointer;
 }
 
-.header-wrapper {
-  margin: 2rem 4rem;
-}
 
 .header-wrapper:last-of-type ul{
   display: flex;

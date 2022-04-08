@@ -1,38 +1,37 @@
-.logo{
-  margin-top: 2rem;
-}
-
-h1 span {
-  font-weight: 700;
-}
-
-span {
-  color: var(--primary);
-}
-
-h2 {
-  font-weight: 500;
-  font-size: 48px;
-}
-
 
 .intro {
   font-size: 38px;
   font-weight: 400;
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
   align-items: center;
   gap: 80px;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .intro-text{
   width: 640px;
 }
 
+.intro-text h2 {
+  font-weight: 500;
+  font-size: 36px;
+  margin-top: 56px;
+}
+
 .intro-text p {
-  margin-top: 18px;
+  margin-top: 32px;
+  font-size: 28px;
+  font-weight: 400;
   width: 565px
+}
+
+.intro-text img {
+  width: 140px;
+}
+
+.intro-img img {
+  width: 95%;
 }
 
 .search-box {
