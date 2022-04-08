@@ -59,26 +59,11 @@
 
   <section class="profiles container">
     <h3>Conheça os nossos consultores</h3>
-    <div *ngFor="let slide of dynamicSlides" class="slide-wrapper">
-        <div class="slide">
-          <div class="img-wrapper">
-            <img [src]="slide.src">
-          </div>
-          <div class="info-wrapper">
-            <h4>{{slide.nome}}</h4>
-            <div class="title">{{slide.title}}</div>
-            <div class="skills" *ngFor="let skill of slide.skills">
-              {{skill}}
-            </div>
-            <div class="links">
-              <p>Ver perfil</p>
-              <span class="material-icons">
-                arrow_forward
-                </span>
-            </div>
-          </div>
-        </div>
+    <div class="slide-wrapper">
+      <div *ngFor="let slide of dynamicSlides" class="slide">
+          <app-card-profile [slide]="slide"></app-card-profile>
       </div>
+    </div>
   </section>
 </main>
 
