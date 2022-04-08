@@ -8,7 +8,7 @@
 
 .blur{
   position: absolute;
-  height: 50%;
+  height: 42%;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -66,6 +66,10 @@ h4 {
   cursor: pointer;
 }
 
+.info-wrapper .links p:first-of-type:hover{
+  text-decoration: underline;
+}
+
 .info-wrapper .links p:last-of-type {
   background-color: var(--primary);
   border-radius: 10px;
@@ -74,3 +78,9 @@ h4 {
   color: var(--white);
   font-weight: 600;
 }
+
+.info-wrapper .links p:last-of-type:hover {
+  background-color: var(--light-primary);
+  transition: 1s;
+}
+

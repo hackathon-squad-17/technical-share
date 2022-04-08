@@ -23,7 +23,7 @@ export class CarouselComponent implements OnInit {
       nome:'Julia Garcia',
       title: 'UX Designer',
       skills: [
-        "Photoshop", 'Illustrator', 'Research'
+        "Photoshop", 'Illustrator', 'Research', 'UX Writing', 'Figma'
       ]
     },
     {
@@ -63,7 +63,7 @@ export class CarouselComponent implements OnInit {
     pullDrag: false,
     dots: false,
     navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
+    navText: ['&#8249', '&#8250'],
     responsive: {
       0: {
         items: 1
