@@ -56,6 +56,6 @@ ul li {
 .header-wrapper:last-of-type ul li:last-of-type:hover {
   border-bottom: 1px solid var(--light-primary);
   margin-bottom: -3px;
-  background-color: #fff3ef;
+  background-color: #ff4400cd;
   transition: 0.5s background-color;
 }

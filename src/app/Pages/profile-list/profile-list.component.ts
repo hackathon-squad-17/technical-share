@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileListComponent implements OnInit {
   user = 'Fernanda';
+  categories = ['UX Design', 'Back-End', 'Front-End', 'Marketing', 'Testes', 'Produto', 'Agile']
   constructor() { }
 
   ngOnInit(): void {
