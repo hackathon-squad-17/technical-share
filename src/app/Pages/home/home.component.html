@@ -34,12 +34,13 @@
       <div class="button-wrapper">
         <p><b>Tem vontade de ensinar?</b> Aprenda enquanto mentora outros consultores da FCamara. Aqui você encontra profissionais dispostos a te ouvir.</p>
         <button>Conheça a plataforma</button>
-
       </div>
       <div class="vertical-line"></div>
       <p><b>Tem alguma dúvida? </b>Na Technical Share você encontra todos os consultores da FCamara e tem a oportunidade de agendar mentorias. </p>
     </div>
   </section>
+
+  <app-categories></app-categories>
 
   <section class="fcamara container">
     <img src="assets/img/fcamara-logo.png">
@@ -55,10 +56,6 @@
   </section>
 </main>
 
-<footer>
-  <div *ngFor="let logo of logos">
-    <img src="assets/img/{{logo}}.png">
-  </div>
-</footer>
+<app-footer></app-footer>
 
 

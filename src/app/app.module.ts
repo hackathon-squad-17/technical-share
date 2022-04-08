@@ -8,6 +8,8 @@ import { HeaderComponent } from './Components/header/header.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { ProfileListComponent } from './Pages/profile-list/profile-list.component';
 import { CarouselComponent } from './Components/carousel/carousel.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { CategoriesComponent } from './Components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CarouselComponent } from './Components/carousel/carousel.component';
     HeaderComponent,
     HomeComponent,
     ProfileListComponent,
-    CarouselComponent
+    CarouselComponent,
+    FooterComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
