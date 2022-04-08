@@ -38,9 +38,11 @@ ul li {
 
 .header-wrapper:last-of-type ul li:last-of-type {
   background-color: #FEFEFE;
-  border: 1px solid var(--light-primary);
-  border-radius: 10px;
-  padding: 2px 24px;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: white;
+  border-radius: 16px;
+  padding: 1px 30px;
   margin: -3px -25px;
 }
 
