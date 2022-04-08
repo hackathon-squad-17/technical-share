@@ -9,10 +9,11 @@
   --light-black: #555;
   --black: #343434;
   --dark-black: #252525;
+  --secondary: #36357E;
 }
 
 html {
   font-family: var(--montserrat);
   background-color: var(--white);
-  
+
 }
