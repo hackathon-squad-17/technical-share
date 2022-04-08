@@ -1,0 +1,76 @@
+.logo{
+  margin-top: 2rem;
+}
+
+h1 span {
+  font-weight: 700;
+}
+
+span {
+  color: var(--primary);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 48px;
+}
+
+
+.intro {
+  font-size: 38px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 5rem;
+}
+
+.intro-text{
+  width: 640px;
+}
+
+.intro-text p {
+  margin-top: 18px;
+  width: 565px
+}
+
+.search-box {
+  display: grid;
+  justify-content: center;
+  margin: 6rem;
+  position: relative;
+}
+
+.search-box input {
+  height: 40px;
+  width: 50rem;
+  background-color: #F2F2F2;
+  padding: 36px;
+  border: none;
+  border-radius: 14px 0 0 14px;
+  grid-column: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.search-box span {
+  position: absolute;
+  font-size: 40px;
+  background-color: #EAEAEA;
+  padding: 16px 30px;
+  border-radius: 0 14px 14px 0;
+  cursor: pointer;
+  grid-column: 2;
+}
+
+.cards {
+
+}
+
+.cards h3 {
+  font-size: 34px;
+}
