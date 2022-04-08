@@ -7,6 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
+  
   dynamicSlides = [
     {
       id: "1",

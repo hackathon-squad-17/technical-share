@@ -10,6 +10,7 @@ import { ProfileListComponent } from './Pages/profile-list/profile-list.componen
 import { CarouselComponent } from './Components/carousel/carousel.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { CategoriesComponent } from './Components/categories/categories.component';
+import { CardProfileComponent } from './Components/card-profile/card-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CategoriesComponent } from './Components/categories/categories.componen
     ProfileListComponent,
     CarouselComponent,
     FooterComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CardProfileComponent
   ],
   imports: [
     BrowserModule,
