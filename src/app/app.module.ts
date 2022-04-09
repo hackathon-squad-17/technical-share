@@ -11,6 +11,9 @@ import { CarouselComponent } from './Components/carousel/carousel.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { CategoriesComponent } from './Components/categories/categories.component';
 import { CardProfileComponent } from './Components/card-profile/card-profile.component';
+import { SearchBarComponent } from './Components/search-bar/search-bar.component';
+import { ForumComponent } from './Pages/forum/forum.component';
+import { ForumPostComponent } from './Components/forum-post/forum-post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CardProfileComponent } from './Components/card-profile/card-profile.com
     CarouselComponent,
     FooterComponent,
     CategoriesComponent,
-    CardProfileComponent
+    CardProfileComponent,
+    SearchBarComponent,
+    ForumComponent,
+    ForumPostComponent
   ],
   imports: [
     BrowserModule,
