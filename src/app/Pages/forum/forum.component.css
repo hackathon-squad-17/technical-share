@@ -25,43 +25,25 @@ span {
   margin-bottom: 5rem;
 }
 
-.message {
-  display: grid;
-  grid-template-columns: 102px 1fr 10rem;
-  gap: 20px;
+
+.posts {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
-  max-width: 900px;
-  padding: 20px;
-  border-radius: 16px;
 }
 
-.message img {
-  width: 102px;
+.posts button {
+  margin-top: 5rem;
+  width: 300px;
+  height: 45px;
+  font-size: 24px;
+  color: var(--primary);
+  background-color: #FFCEBC;
+  border: 1px solid var(--primary);
 }
 
-textarea {
-  border: none;
-  resize: none;
-  min-width: 520px;
-  align-self: center;
-  font-size: 18px;
-}
-
-button {
+.posts button:hover {
   color: white;
   background-color: var(--primary);
-  border: none;
-  border-radius: 16px;
-  width: 100px;
-  height: 30px;
-  align-self: center;
-  font-size: 18px;
 }
-
-button:hover {
-  background-color: #ff4400cd;
-  transition: 0.5s background-color;
-}
-
 
