@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForumComponent } from './Pages/forum/forum.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { ProfileListComponent } from './Pages/profile-list/profile-list.component';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'profiles',
     component: ProfileListComponent
+  },
+  {
+    path: 'forum',
+    component: ForumComponent
   }
 ];
 

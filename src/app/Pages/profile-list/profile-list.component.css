@@ -36,38 +36,6 @@
   width: 650px;
 }
 
-.search-box {
-  display: grid;
-  grid-template-columns: 1fr 100px;
-  justify-content: center;
-  margin: 6rem auto;
-  position: relative;
-}
-
-.search-box input {
-  height: 40px;
-  width: 50rem;
-  background-color: #F2F2F2;
-  padding: 36px;
-  border: none;
-  border-radius: 14px 0 0 14px;
-  grid-column: 0;
-}
-
-input:focus {
-  outline: none;
-}
-
-.search-box span {
-  position: absolute;
-  font-size: 40px;
-  background-color: #EAEAEA;
-  padding: 16px 30px;
-  border-radius: 0 14px 14px 0;
-  cursor: pointer;
-  grid-column: 2;
-}
-
 span {
   color: var(--primary);
 }
@@ -203,16 +171,6 @@ h3 {
 
   .intro-text p {
     display: none;
-  }
-
-  .search-box {
-    width: 100%;
-    margin: 0;
-  }
-
-  .search-box input {
-    width: 100%;
-    margin: 0;
   }
 
   .cards {
