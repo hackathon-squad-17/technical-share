@@ -17,7 +17,7 @@
           </span>
           <p>2</p>
       </div>
-      <button routerLink="/post">
+      <button routerLink="/post" *ngIf="router.url == '/forum'">
         <span class="material-icons arrow">
           arrow_forward
           </span>

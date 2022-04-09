@@ -18,10 +18,6 @@ span {
 }
 
 .new-post {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
   margin-bottom: 5rem;
 }
 
@@ -30,6 +26,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .posts button {
@@ -40,6 +37,7 @@ span {
   color: var(--primary);
   background-color: #FFCEBC;
   border: 1px solid var(--primary);
+  border-radius: 16px;
 }
 
 .posts button:hover {
