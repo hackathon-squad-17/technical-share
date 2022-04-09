@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ForumComponent } from './Pages/forum/forum.component';
 import { HomeComponent } from './Pages/home/home.component';
+import { PostComponent } from './Pages/post/post.component';
 import { ProfileListComponent } from './Pages/profile-list/profile-list.component';
 
 const routes: Routes = [
@@ -16,11 +17,17 @@ const routes: Routes = [
   {
     path: 'forum',
     component: ForumComponent
+  },
+  {
+    path: 'post',
+    component: PostComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
