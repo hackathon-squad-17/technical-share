@@ -1,6 +1,23 @@
 <app-header></app-header>
 <app-search-bar placeholder="Encontre tópicos"></app-search-bar>
+
 <section class="container">
-  <h3>Categorias</h3>
+  <h3>Categorias:</h3>
   <app-categories></app-categories>
+</section>
+
+<section class="new-post">
+  <h4><span>Tem alguma dúvida? </span>Inicie uma discussão no nosso fórum!</h4>
+  <div class="message">
+    <img src="assets/img/foto-fernanda.png">
+    <textarea placeholder="Digite aqui a sua dúvida"></textarea>
+    <button>Publicar</button>
+  </div>
+</section>
+
+<section class="posts">
+  <app-forum-post></app-forum-post>
+  <app-forum-post></app-forum-post>
+  <app-forum-post></app-forum-post>
+  <app-forum-post></app-forum-post>
 </section>
