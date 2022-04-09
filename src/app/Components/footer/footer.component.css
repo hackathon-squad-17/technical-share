@@ -14,3 +14,15 @@ footer img:hover {
   filter: saturate(220%);
   transition: .5s;
 }
+
+@media screen and (max-width: 800px) {
+  footer{
+    margin: 3rem 0;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  footer img {
+    width: 36px;
+  }
+}
