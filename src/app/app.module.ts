@@ -13,6 +13,7 @@ import { CategoriesComponent } from './Components/categories/categories.componen
 import { CardProfileComponent } from './Components/card-profile/card-profile.component';
 import { SearchBarComponent } from './Components/search-bar/search-bar.component';
 import { ForumComponent } from './Pages/forum/forum.component';
+import { ForumPostComponent } from './Components/forum-post/forum-post.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ForumComponent } from './Pages/forum/forum.component';
     CategoriesComponent,
     CardProfileComponent,
     SearchBarComponent,
-    ForumComponent
+    ForumComponent,
+    ForumPostComponent
   ],
   imports: [
     BrowserModule,
