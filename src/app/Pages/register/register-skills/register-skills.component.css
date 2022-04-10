@@ -1,0 +1,39 @@
+section .progress {
+  width: 25%;
+  margin: 3rem auto;
+}
+
+.progress-bar {
+  background: radial-gradient(96.73% 47987.6% at 100% 100%, rgba(161, 119, 101, 0) 0%, #F9CA14 0%, #F69A12 14.58%, #E9783A 50%, #E9783A 65.1%, #FF4500 84.9%);
+}
+
+.skills {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+button {
+  border: none;
+  margin-top: 1em;
+  color : var(--primary);
+  font-size: 28px;
+  border-radius: 16px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 5px 40px;
+  background-color: var(--primary);
+}
+
+button:hover {
+  background-color: #ff4400cd;
+  transition: 1s background-color;
+}

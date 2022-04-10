@@ -18,6 +18,10 @@ import { CommentBoxComponent } from './Components/comment-box/comment-box.compon
 import { CommentPostComponent } from './Components/comment-post/comment-post.component';
 import { PostComponent } from './Pages/post/post.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { RegisterComponent } from './Pages/register/register.component';
+import { RegisterInfoComponent } from './Pages/Register/register-info/register-info.component';
+import { RegisterRoleComponent } from './Pages/Register/register-role/register-role.component';
+import { RegisterSkillsComponent } from './Pages/Register/register-skills/register-skills.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { LoginComponent } from './Pages/login/login.component';
     CommentBoxComponent,
     CommentPostComponent,
     PostComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    RegisterInfoComponent,
+    RegisterRoleComponent,
+    RegisterSkillsComponent
   ],
   imports: [
     BrowserModule,
