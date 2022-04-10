@@ -10,6 +10,7 @@ import { ForumService } from 'src/app/Services/forum.service';
 })
 export class PostComponent implements OnInit {
   post:any = null;
+  
 
   constructor(private route: ActivatedRoute, private forumService: ForumService) { }
 

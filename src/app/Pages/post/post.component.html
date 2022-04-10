@@ -2,6 +2,6 @@
 <main *ngIf = 'post' >
   <app-forum-post [post]='post'></app-forum-post>
   <app-comment-box placeholder="Escreva um comentário"></app-comment-box>
-  <app-comment-post></app-comment-post>
+  <app-comment-post *ngFor='let comentario of post.comentarios' [comentario]='comentario'></app-comment-post>
 </main>
 <app-footer></app-footer>
