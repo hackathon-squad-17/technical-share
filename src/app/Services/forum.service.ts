@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Post } from '../Models/post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,14 @@ import { HttpClient } from '@angular/common/http';
 export class ForumService {
 
   constructor(private http:HttpClient) {
+  }
+
+  public createPost(post:Post){
+   return this.http.post('http://localhost:8080/postagens/nova-postagem', post)
+  }
+
+  public createComment(comment:Comment){
+    return this.http.post('http://localhost:8080/comentarios/novo-comentario', comment)
   }
 
   public getAllPosts() {

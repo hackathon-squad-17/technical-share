@@ -18,6 +18,7 @@ import { ForumPostComponent } from './Components/forum-post/forum-post.component
 import { CommentBoxComponent } from './Components/comment-box/comment-box.component';
 import { CommentPostComponent } from './Components/comment-post/comment-post.component';
 import { PostComponent } from './Pages/post/post.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PostComponent } from './Pages/post/post.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
