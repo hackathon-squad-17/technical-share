@@ -30,7 +30,11 @@ ul li {
 }
 
 a {
-  color: var(--light-primary)
+  color: var(--light-primary);
+}
+
+.login{
+  color: white;
 }
 
 .header-wrapper ul{
@@ -51,7 +55,7 @@ a {
 
 .header-wrapper ul li:hover {
   border-bottom: 3px solid var(--light-primary);
-  margin-bottom: -4px;
+  margin-bottom: -3px;
   transition: .2s;
 
 }

@@ -17,6 +17,7 @@ import { ForumPostComponent } from './Components/forum-post/forum-post.component
 import { CommentBoxComponent } from './Components/comment-box/comment-box.component';
 import { CommentPostComponent } from './Components/comment-post/comment-post.component';
 import { PostComponent } from './Pages/post/post.component';
+import { LoginComponent } from './Pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PostComponent } from './Pages/post/post.component';
     ForumPostComponent,
     CommentBoxComponent,
     CommentPostComponent,
-    PostComponent
+    PostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
