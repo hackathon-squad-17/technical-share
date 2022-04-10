@@ -1,1 +1,8 @@
-<p>post-creator works!</p>
+<div class="comment container">
+  <img src="assets/img/foto-fernanda.png">
+  <form>
+    <input type="text" placeholder="Título" name="titulo" [(ngModel)]="post.titulo">
+    <textarea placeholder="Qual a sua dúvida" [(ngModel)]="post.conteudo" name="conteudo"></textarea>
+    <button (click)=sendForm()>Publicar</button>
+  </form>
+</div>

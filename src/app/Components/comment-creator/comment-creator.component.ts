@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from 'src/app/Models/post.model';
+import { Comment } from 'src/app/Models/comment.model';
 import { ForumService } from 'src/app/Services/forum.service';
 
 @Component({
@@ -8,10 +8,8 @@ import { ForumService } from 'src/app/Services/forum.service';
   styleUrls: ['./comment-creator.component.css']
 })
 export class CommentCreatorComponent implements OnInit {
-  @Input() placeholder:string = '';
-
-  post?:Post;
-  conteudo:string = '';
+  @Input() idPost?:number;
+  comment:Comment = new Comment();
 
   constructor(private forumService: ForumService) { }
 
@@ -19,9 +17,7 @@ export class CommentCreatorComponent implements OnInit {
   }
 
   sendForm(){
-    this.post = new Post();
-    this.post.conteudo = this.conteudo;
-    this.forumService.createPost(this.post);
-    console.log(this.post);
+    this.comment.idPost = this.idPost;
+    this.forumService.createComment(this.comment).subscribe( x => console.log(x));
   }
 }

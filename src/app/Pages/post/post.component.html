@@ -1,7 +1,7 @@
 <app-header></app-header>
-<main *ngIf = 'post' >
-  <app-forum-post [post]='post'></app-forum-post>
-  <app-comment-creator placeholder="Escreva um comentário"></app-comment-creator>
-  <app-comment *ngFor='let comentario of post.comentarios' [comentario]='comentario'></app-comment>
+<main *ngIf = 'idPost' >
+  <app-forum-post [post]='idPost'></app-forum-post>
+  <app-comment-creator [idPost]="idPost.id"></app-comment-creator>
+  <app-comment *ngFor='let comentario of idPost.comentarios' [comentario]='comentario'></app-comment>
 </main>
 <app-footer></app-footer>

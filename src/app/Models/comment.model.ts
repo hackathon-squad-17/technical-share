@@ -1,5 +1,5 @@
-export class Post {
-  conteudo?:string;
+export class Comment {
+  conteudo:string = '';
   idPost?:number;
-  login?:string;
+  login:string = 'gabi';
 }

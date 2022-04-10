@@ -9,15 +9,14 @@ import { ForumService } from 'src/app/Services/forum.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  post:any = null;
-  
+  idPost:any = null;
 
   constructor(private route: ActivatedRoute, private forumService: ForumService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
     this.forumService.getPostById(params['id']).subscribe(post => {
-        this.post = post
+        this.idPost = post
       })
     })
   }
