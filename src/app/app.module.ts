@@ -21,6 +21,10 @@ import { PostComponent } from './Pages/post/post.component';
 import { FormsModule } from '@angular/forms';
 import { PostCreatorComponent } from './Components/post-creator/post-creator.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { RegisterComponent } from './Pages/register/register.component';
+import { RegisterInfoComponent } from './Pages/register/register-info/register-info.component';
+import { RegisterRoleComponent } from './Pages/register/register-role/register-role.component';
+import { RegisterSkillsComponent } from './Pages/register/register-skills/register-skills.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { LoginComponent } from './Pages/login/login.component';
     CommentComponent,
     PostComponent,
     PostCreatorComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    RegisterInfoComponent,
+    RegisterRoleComponent,
+    RegisterSkillsComponent
   ],
   imports: [
     BrowserModule,

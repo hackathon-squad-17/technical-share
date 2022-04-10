@@ -1,0 +1,49 @@
+section .progress {
+  width: 25%;
+  margin: 3rem auto;
+}
+
+.progress-bar {
+  background: radial-gradient(96.73% 47987.6% at 100% 100%, #F9CA14 0%, rgba(161, 119, 101, 0) 0.01%, rgba(233, 120, 58, 0) 53.64%, rgba(246, 154, 18, 0) 53.65%, #E9783A 53.66%, #FF4500 84.9%);}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+}
+
+label {
+  margin-bottom: .5rem;
+}
+
+input {
+  background-color: #EBEBF2;
+  border: none;
+  border-radius: 16px;
+  padding: 20px 12px;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  align-self: flex-end;
+  margin-top: 1em;
+}
+
+span {
+  color : var(--primary);
+  font-size: 30px;
+  border-radius: 24px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 5px 20px;
+  background-color: var(--primary);
+}
