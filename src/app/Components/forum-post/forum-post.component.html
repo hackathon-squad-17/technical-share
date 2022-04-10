@@ -4,11 +4,11 @@
       <img src="assets/img/foto-amanda.png">
       <div class="post-wrapper">
         <p>Amanda Silva</p>
-        <h4><a routerLink="/post">Sit odio natoque vitae risus id sem morbi elit?</a></h4>
+        <h4><a routerLink = '/post/{{post.id}}'>{{post.titulo}}</a></h4>
       </div>
     </div>
     <div class="post-content">
-      Sit odio natoque vitae risus id sem morbi elit porttitor. Velit ultrices tellus risus pretium vitae urna. Risus ornare quis sit eget eu. Duis sagittis venenatis, accumsan eu varius. Mattis condimentum diam sit elit, risus, nullam mauris morbi urna. Nisi in tempus, mi, nullam lorem feugiat id laoreet. Nulla quis id nunc, rhoncus ut lectus sollicitudin placerat convallis.
+      {{post.conteudo}}
     </div>
     <div class="post-details">
       <div class="comment-info">

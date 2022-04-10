@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForumService } from 'src/app/Services/forum.service';
 
 @Component({
   selector: 'app-forum',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForumComponent implements OnInit {
 
-  constructor() { }
+  constructor(private forumService: ForumService) { }
+
+  posts: any[] = [];
 
   ngOnInit(): void {
+    this.forumService.getAllPosts().subscribe((value:any) => {
+      this.posts = value;
+     });
   }
-
 }

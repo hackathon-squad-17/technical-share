@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +40,8 @@ import { PostComponent } from './Pages/post/post.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

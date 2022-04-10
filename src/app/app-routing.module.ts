@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ForumComponent
   },
   {
-    path: 'post',
+    path: 'post/:id',
     component: PostComponent
   }
 ];
