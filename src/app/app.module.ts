@@ -19,9 +19,9 @@ import { CommentPostComponent } from './Components/comment-post/comment-post.com
 import { PostComponent } from './Pages/post/post.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
-import { RegisterInfoComponent } from './Pages/Register/register-info/register-info.component';
-import { RegisterRoleComponent } from './Pages/Register/register-role/register-role.component';
-import { RegisterSkillsComponent } from './Pages/Register/register-skills/register-skills.component';
+import { RegisterInfoComponent } from './Pages/register/register-info/register-info.component';
+import { RegisterRoleComponent } from './Pages/register/register-role/register-role.component';
+import { RegisterSkillsComponent } from './Pages/register/register-skills/register-skills.component';
 
 @NgModule({
   declarations: [
