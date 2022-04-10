@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginDetails } from '../Models/user.model';
+import { LoginDetails, UserRegisterInfo } from '../Models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,9 @@ export class UserService {
 
   getUserName(){
     return this.username
+  }
+
+  registerUserInfo(userRegisterInfo:UserRegisterInfo){
+    return this.http.post('http://localhost:8080/usuarios/novo-usuario', userRegisterInfo)
   }
 }
