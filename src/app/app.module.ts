@@ -20,6 +20,7 @@ import { CommentComponent } from './Components/comment/comment.component';
 import { PostComponent } from './Pages/post/post.component';
 import { FormsModule } from '@angular/forms';
 import { PostCreatorComponent } from './Components/post-creator/post-creator.component';
+import { LoginComponent } from './Pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PostCreatorComponent } from './Components/post-creator/post-creator.com
     CommentCreatorComponent,
     CommentComponent,
     PostComponent,
-    PostCreatorComponent
+    PostCreatorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
