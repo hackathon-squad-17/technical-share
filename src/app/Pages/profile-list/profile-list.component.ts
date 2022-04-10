@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForumService } from 'src/app/Services/forum.service';
 
 @Component({
   selector: 'app-profile-list',
@@ -55,9 +56,14 @@ export class ProfileListComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  posts: any[] = [];
+
+  constructor(private forumService: ForumService) { }
 
   ngOnInit(): void {
+    this.forumService.getAllPosts().subscribe((value:any) => {
+      this.posts = value;
+     });
   }
 
 }

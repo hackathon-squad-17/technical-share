@@ -25,7 +25,7 @@
 
   <section class="forum container">
     <h3>Populares no <span>Fórum</span></h3>
-    <app-forum-post></app-forum-post>
+    <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
   </section>
 
   <section class="categories container">
