@@ -3,15 +3,15 @@ import { Post } from 'src/app/Models/post.model';
 import { ForumService } from 'src/app/Services/forum.service';
 
 @Component({
-  selector: 'app-comment-box',
-  templateUrl: './comment-box.component.html',
-  styleUrls: ['./comment-box.component.css']
+  selector: 'app-comment-creator',
+  templateUrl:'./comment-creator.component.html' ,
+  styleUrls: ['./comment-creator.component.css']
 })
-export class CommentBoxComponent implements OnInit {
+export class CommentCreatorComponent implements OnInit {
   @Input() placeholder:string = '';
 
   post?:Post;
-  conteudo?:string;
+  conteudo:string = '';
 
   constructor(private forumService: ForumService) { }
 

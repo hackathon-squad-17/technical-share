@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main *ngIf = 'post' >
   <app-forum-post [post]='post'></app-forum-post>
-  <app-comment-box placeholder="Escreva um comentário"></app-comment-box>
-  <app-comment-post *ngFor='let comentario of post.comentarios' [comentario]='comentario'></app-comment-post>
+  <app-comment-creator placeholder="Escreva um comentário"></app-comment-creator>
+  <app-comment *ngFor='let comentario of post.comentarios' [comentario]='comentario'></app-comment>
 </main>
 <app-footer></app-footer>

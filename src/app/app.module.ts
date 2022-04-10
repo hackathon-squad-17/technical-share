@@ -15,10 +15,11 @@ import { CardProfileComponent } from './Components/card-profile/card-profile.com
 import { SearchBarComponent } from './Components/search-bar/search-bar.component';
 import { ForumComponent } from './Pages/forum/forum.component';
 import { ForumPostComponent } from './Components/forum-post/forum-post.component';
-import { CommentBoxComponent } from './Components/comment-box/comment-box.component';
-import { CommentPostComponent } from './Components/comment-post/comment-post.component';
+import { CommentCreatorComponent } from './Components/comment-creator/comment-creator.component';
+import { CommentComponent } from './Components/comment/comment.component';
 import { PostComponent } from './Pages/post/post.component';
 import { FormsModule } from '@angular/forms';
+import { PostCreatorComponent } from './Components/post-creator/post-creator.component';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { FormsModule } from '@angular/forms';
     SearchBarComponent,
     ForumComponent,
     ForumPostComponent,
-    CommentBoxComponent,
-    CommentPostComponent,
-    PostComponent
+    CommentCreatorComponent,
+    CommentComponent,
+    PostComponent,
+    PostCreatorComponent
   ],
   imports: [
     BrowserModule,

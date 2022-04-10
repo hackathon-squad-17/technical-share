@@ -38,3 +38,7 @@ button:hover {
   background-color: #ff4400cd;
   transition: 1s background-color;
 }
+
+form {
+  display: flex;
+}
