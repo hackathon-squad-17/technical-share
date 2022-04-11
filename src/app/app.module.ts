@@ -22,6 +22,7 @@ import { RegisterComponent } from './Pages/register/register.component';
 import { RegisterInfoComponent } from './Pages/register/register-info/register-info.component';
 import { RegisterRoleComponent } from './Pages/register/register-role/register-role.component';
 import { RegisterSkillsComponent } from './Pages/register/register-skills/register-skills.component';
+import { UserProfileComponent } from './Pages/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RegisterSkillsComponent } from './Pages/register/register-skills/regist
     RegisterComponent,
     RegisterInfoComponent,
     RegisterRoleComponent,
-    RegisterSkillsComponent
+    RegisterSkillsComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
