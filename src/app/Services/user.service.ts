@@ -78,4 +78,7 @@ export class UserService {
     })
   }
 
+  getAllUsers(){
+    return this.http.get('http://localhost:8080/usuarios/todos-usuarios')
+  }
 }

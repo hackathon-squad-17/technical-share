@@ -7,10 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardProfileComponent implements OnInit {
   @Input() slide:any;
-  
+  @Input() user:any;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  checkUser(){
+    console.log(this.user)
+  }
 }
