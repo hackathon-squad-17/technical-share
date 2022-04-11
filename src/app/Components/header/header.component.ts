@@ -10,10 +10,12 @@ import { UserService } from 'src/app/Services/user.service';
 export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
   buttonState:string = 'Entrar'
-  constructor(private userService: UserService, private router: Router) { }
+  login:string = ''
+   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.checksLogin();
+    this.login = this.userService.getUserFromStorage();
   }
 
   checksLogin(){
@@ -27,4 +29,11 @@ export class HeaderComponent implements OnInit {
       }
   }
 
+  getUserProfileLink(){
+    if(this.isLoggedIn){
+      return `/profile/${this.login}`
+    } else{
+      return '/login'
+    }
+  }
 }

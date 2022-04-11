@@ -11,10 +11,11 @@ import { UserService } from 'src/app/Services/user.service';
 export class CommentCreatorComponent implements OnInit {
   @Input() idPost?:number;
   comment:Comment = new Comment();
-
+  imageUrl: string = ''
   constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
+    this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.userService.getUserFromStorage()}`;
   }
 
   sendForm(){

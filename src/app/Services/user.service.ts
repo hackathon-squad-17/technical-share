@@ -30,16 +30,15 @@ export class UserService {
     this.router.navigate(['/'])
   }
 
-  getUserFromStorage() {
+  getUserFromStorage():string {
     let savedUser = sessionStorage.getItem('login');
     if(savedUser){
       savedUser = JSON.parse(savedUser)
     }
-    return savedUser;
+    return savedUser??'';
   }
 
-  findUserByLogin() {
-    let login = this.getUserFromStorage()
+  findUserByLogin(login: string){
     return this.http.get(`http://localhost:8080/usuarios/encontra-usuario-login?login=${login}`)
   }
 
@@ -85,5 +84,4 @@ export class UserService {
   getAllUsers(){
     return this.http.get('http://localhost:8080/usuarios/todos-usuarios')
   }
-
 }

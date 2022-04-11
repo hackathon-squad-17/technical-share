@@ -10,10 +10,11 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class PostCreatorComponent implements OnInit {
   post:Post = new Post();
-
+  imageUrl: string = '';
   constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
+    this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.userService.getUserFromStorage()}`;
   }
 
   sendForm() {

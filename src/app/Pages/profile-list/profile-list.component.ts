@@ -59,7 +59,8 @@ export class ProfileListComponent implements OnInit {
 
   posts: any[] = [];
   users: any[] = [];
-  loggedUser:string = ''
+  loggedUser:any = ''
+  loggedUserImageUrl:string = ''
   constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -72,8 +73,10 @@ export class ProfileListComponent implements OnInit {
       console.log(this.users);
     })
 
-    this.userService.findUserByLogin().subscribe((value:any) => {
-    this.loggedUser = value.nome;
+    this.userService.findUserByLogin(this.userService.getUserFromStorage()).subscribe((value:any) => {
+    this.loggedUser = value;
+    this.loggedUserImageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${value.login}`;
+
     });
 
 

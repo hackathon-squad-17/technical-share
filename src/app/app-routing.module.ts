@@ -34,7 +34,7 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'profile',
+    path: 'profile/:login',
     component: UserProfileComponent
   }
 ];

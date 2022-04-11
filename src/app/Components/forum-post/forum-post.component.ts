@@ -9,11 +9,11 @@ import { ForumService } from 'src/app/Services/forum.service';
 })
 export class ForumPostComponent implements OnInit {
   @Input() post:any;
+  imageUrl: string = '';
   constructor(public router: Router) { }
 
   ngOnInit(): void {
-
-
+    this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.post.usuario.login}`;
   }
 
 }
