@@ -30,7 +30,11 @@ export class RegisterInfoComponent implements OnInit {
   }
 
   submit(){
-    this.userService.registerUserInfo(this.userRegisterInfo).subscribe(e => console.log(e), error => console.log(error));
+    this.userService.registerUserInfo(this.userRegisterInfo).subscribe(e => {
+      this.userService.setRegisteringUser(this.userRegisterInfo.login)
+    }
+
+      , error => console.log(error));
     this.onForward.emit();
   }
 

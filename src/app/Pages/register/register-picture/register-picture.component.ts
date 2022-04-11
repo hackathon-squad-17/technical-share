@@ -1,5 +1,9 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
+import { ImageService } from 'src/app/Services/image-service.service';
+import { UserService } from 'src/app/Services/user.service';
+class ImageSnippet {
+  constructor(public src: string, public file: File) {}
+}
 @Component({
   selector: 'app-register-picture',
   templateUrl: './register-picture.component.html',
@@ -9,12 +13,30 @@ export class RegisterPictureComponent implements OnInit {
   @Output() onForward = new EventEmitter<any>();
 
   image?:File;
-  constructor() { }
+  constructor(private imageService: ImageService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
-  submit(){
+  submit(imageInput: any){
+    const file: File = imageInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener('load', (event: any) => {
+
+      let selectedFile = new ImageSnippet(event.target.result, file);
+      let username:string = this.userService.getRegisteringUser();
+      console.log(username)
+     this.imageService.uploadImage(selectedFile.file, username).subscribe(
+        (res) => {
+
+        },
+        (err) => {
+
+        })
+    });
+
+    reader.readAsDataURL(file);
     this.onForward.emit();
   }
 }

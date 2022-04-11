@@ -7,6 +7,7 @@ import { LoginDetails, UserRegisterInfo } from '../Models/user.model';
 })
 export class UserService {
   private username:string = '';
+  private registeringUser: string = '';
 
   constructor(private http:HttpClient) {}
 
@@ -25,7 +26,34 @@ export class UserService {
     return this.username
   }
 
+  setRegisteringUser(username:string){
+    this.registeringUser = username
+  }
+
+  getRegisteringUser():string{
+    return this.registeringUser
+  }
+
   registerUserInfo(userRegisterInfo:UserRegisterInfo){
     return this.http.post('http://localhost:8080/usuarios/novo-usuario', userRegisterInfo)
   }
+
+  registerUserRole(userRole:string){
+    return this.http.post('http://localhost:8080/usuarios/nova-area-atuacao', {
+      login: this.registeringUser,
+      areaAtuacao: userRole
+    })
+  }
+
+  getAvailableAbilities(){
+    return this.http.get('http://localhost:8080/habilidades/todas-habilidades')
+  }
+
+  registerUserAbilities(abilities:string[]){
+    return this.http.post('http://localhost:8080/usuarios/novas-habilidades', {
+      login: this.registeringUser,
+      habilidades: abilities
+    })
+  }
+
 }

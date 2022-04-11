@@ -26,6 +26,12 @@
   cursor: pointer;
 }
 
+.category-selected {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   .categories h3 {
     margin: 4rem 1rem 2rem 1rem;

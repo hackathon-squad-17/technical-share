@@ -4,8 +4,11 @@
   </div>
   <form>
     <div class="form-group">
-      <input type="file" id="img" name="img" accept="image/*" [(ngModel)]="image">
+        <span>Select Image</span>
+        <input #imageInput
+               type="file"
+               accept="image/*">
     </div>
-    <button (click)="submit()"><span class="material-icons arrow">arrow_forward</span></button>
+    <button (click)="submit(imageInput)"><span class="material-icons arrow">arrow_forward</span></button>
   </form>
 </section>

@@ -5,7 +5,7 @@
   <form>
     <div class="form-group">
       <label for="role">Escreva seu atual cargo na FCamara</label>
-      <input type="text" placeholder="Ex: Dev Front-End Pleno" name="role" id="role">
+      <input type="text" placeholder="Ex: Dev Front-End Pleno" name="role" id="role" required [(ngModel)]="userRole">
     </div>
     <button (click)="submit()">
       <span class="material-icons arrow">

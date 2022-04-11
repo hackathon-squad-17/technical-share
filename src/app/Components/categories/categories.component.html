@@ -1,6 +1,10 @@
 <section>
-  <div class="categories-list">
-    <div class="category" *ngFor = "let category of categories">
+    <div class="categories-list">
+    <div
+      class="category"
+      *ngFor = "let category of categories"
+      (click)="toggleAbility(category)"
+      [class.category-selected]="isSelected(category)">
       {{category}}
     </div>
   </div>
