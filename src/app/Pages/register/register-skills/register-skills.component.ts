@@ -1,5 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserRegisterInfo } from 'src/app/Models/user.model';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -10,7 +11,6 @@ import { UserService } from 'src/app/Services/user.service';
 export class RegisterSkillsComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) { }
   selectedCategories:string[] = [];
-
   ngOnInit(): void {
   }
 
@@ -20,8 +20,8 @@ export class RegisterSkillsComponent implements OnInit {
 
   registerSkills(){
     this.userService.registerUserAbilities(this.selectedCategories).subscribe((x) => {
-      this.router.navigate(['/forum'])
-
+      let registeringUser:any = this.userService.getRegisteringUser();
+      this.userService.login({loginOuEmail: registeringUser.login, senha: registeringUser.password});
     }, (err) => {
       console.log(err)
     })

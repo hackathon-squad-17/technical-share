@@ -25,9 +25,11 @@ export class RegisterPictureComponent implements OnInit {
     reader.addEventListener('load', (event: any) => {
 
       let selectedFile = new ImageSnippet(event.target.result, file);
-      let username:string = this.userService.getRegisteringUser();
+      let username:string | undefined = this.userService.getRegisteringUser()?.login;
       console.log(username)
-     this.imageService.uploadImage(selectedFile.file, username).subscribe(
+
+      // TODO consertar ?? tipagem
+     this.imageService.uploadImage(selectedFile.file, username??'').subscribe(
         (res) => {
 
         },
