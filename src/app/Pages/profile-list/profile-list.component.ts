@@ -59,7 +59,7 @@ export class ProfileListComponent implements OnInit {
 
   posts: any[] = [];
   users: any[] = [];
-
+  loggedUser:string = ''
   constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -71,7 +71,12 @@ export class ProfileListComponent implements OnInit {
       this.users = value;
       console.log(this.users);
     })
-  }
 
+    this.userService.findUserByLogin().subscribe((value:any) => {
+    this.loggedUser = value.nome;
+    });
+
+
+  }
 
 }

@@ -8,10 +8,14 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  abilities:string[] = ['Mobile', 'CSS', 'Angular', 'HTML', 'CSS'];
+  user: any;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
+    this.userService.findUserByLogin().subscribe((value:any) => {
+      this.user = value;
+      });
   }
 
   logout(){

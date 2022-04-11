@@ -38,6 +38,10 @@ export class UserService {
     return savedUser;
   }
 
+  findUserByLogin() {
+    let login = this.getUserFromStorage()
+    return this.http.get(`http://localhost:8080/usuarios/encontra-usuario-login?login=${login}`)
+  }
 
   getUserName(){
     return this.username
@@ -81,4 +85,5 @@ export class UserService {
   getAllUsers(){
     return this.http.get('http://localhost:8080/usuarios/todos-usuarios')
   }
+
 }
