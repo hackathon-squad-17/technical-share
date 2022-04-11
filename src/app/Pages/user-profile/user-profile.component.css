@@ -1,0 +1,71 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  width: 70%;
+  border-radius: 16px;
+  margin: 5rem auto 0 auto;
+  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  padding: 40px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+.name-title {
+  align-self: center;
+  text-align: center;
+  color: #343434;
+  margin-top: 1.5rem;
+}
+
+.name-title h2 {
+  font-size: 36px;
+}
+
+.name-title h4{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h3 {
+  color: #343434;
+  font-size: 32px;
+  margin-top: 2rem;
+}
+
+.abilities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 1rem 0 1rem 0;
+}
+
+.ability {
+  color: var(--primary);
+  background-color: #FFEAE2;
+  padding: 12px 48px;
+  font-size: 24px;
+  border-radius: 16px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  width:500px;
+  padding: 12px 12px;
+  font-size: 24px;
+  align-self: center;
+  margin-top: 4rem;
+}

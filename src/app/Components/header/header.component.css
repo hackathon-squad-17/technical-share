@@ -43,26 +43,24 @@ a {
   gap: 4rem;
 }
 
-.header-wrapper ul li:last-of-type {
+.link:hover {
+  border-bottom: 3px solid var(--light-primary);
+  margin-bottom: -4px;
+  transition: .2s;
+}
+
+.login {
   background-color: #FEFEFE;
   border: 1px solid var(--primary);
   background-color: var(--primary);
   color: white;
-  border-radius: 16px;
-  padding: 1px 30px;
-  margin: -3px -25px;
+  border-radius: 24px;
+  padding: 3px 30px;
 }
 
-.header-wrapper ul li:hover {
-  border-bottom: 3px solid var(--light-primary);
-  margin-bottom: -3px;
-  transition: .2s;
 
-}
-
-.header-wrapper ul li:last-of-type:hover {
+.login:hover {
   border-bottom: 1px solid var(--light-primary);
-  margin-bottom: -4px;
   background-color: #ff4400cd;
   transition: 0.5s background-color;
 }
