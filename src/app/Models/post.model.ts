@@ -1,6 +1,6 @@
 export class Post {
   conteudo:string = '';
-  login:string = 'gabi';
+  login:any = '';
   titulo:string = '';
 }
 

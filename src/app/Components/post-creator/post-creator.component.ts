@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from 'src/app/Models/post.model';
 import { ForumService } from 'src/app/Services/forum.service';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-post-creator',
@@ -10,15 +11,17 @@ import { ForumService } from 'src/app/Services/forum.service';
 export class PostCreatorComponent implements OnInit {
   post:Post = new Post();
 
-  constructor(private forumService: ForumService) { }
+  constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
   sendForm() {
+    this.post.login = this.userService.getUserFromStorage();
     this.forumService.createPost(this.post).subscribe((x) => {
       console.log(x);
     });
+    window.location.reload();
   }
 
 }

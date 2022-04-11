@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Comment } from 'src/app/Models/comment.model';
 import { ForumService } from 'src/app/Services/forum.service';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-comment-creator',
@@ -11,13 +12,15 @@ export class CommentCreatorComponent implements OnInit {
   @Input() idPost?:number;
   comment:Comment = new Comment();
 
-  constructor(private forumService: ForumService) { }
+  constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
   sendForm(){
     this.comment.idPost = this.idPost;
+    this.comment.login = this.userService.getUserFromStorage();
     this.forumService.createComment(this.comment).subscribe( x => console.log(x));
+    window.location.reload();
   }
 }
