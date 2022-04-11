@@ -1,7 +1,9 @@
 <div class="forum-cards">
   <div class="forum-card">
     <div class="post-info">
-      <img src="{{imageUrl}}">
+      <div class="img-wrapper">
+        <img src="{{imageUrl}}">
+      </div>
       <div class="post-wrapper">
         <p><a routerLink = '/profile/{{post.usuario.login}}'>{{post.usuario.nome}}</a></p>
         <h4><a routerLink = '/post/{{post.id}}'>{{post.titulo}}</a></h4>

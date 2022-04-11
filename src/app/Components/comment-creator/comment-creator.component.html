@@ -1,5 +1,7 @@
 <div class="comment container">
-  <img src="{{imageUrl}}">
+  <div class="img-wrapper">
+    <img src="{{imageUrl}}">
+  </div>
   <form>
     <textarea placeholder="Comentário" [(ngModel)]="comment.conteudo" name="conteudo"></textarea>
     <button (click)=sendForm()>Publicar</button>

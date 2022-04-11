@@ -8,10 +8,10 @@
 }
 
 .forum-card {
-  width: 900px;
   box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
   padding: 40px;
   border-radius: 16px;
+  width: 900px;
 }
 
 .post-info {
@@ -24,9 +24,19 @@
   margin-bottom: 8px;
 }
 
-.post-info img {
-  width: 100px;
-  height: 100px;
+.img-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.img-wrapper img {
+  max-width: 100%;
+  height: auto;
 }
 
 .post-wrapper {

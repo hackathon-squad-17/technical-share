@@ -1,5 +1,7 @@
 <div class="comment container">
-  <img src="{{imageUrl}}">
+  <div class="img-wrapper">
+    <img src="{{imageUrl}}">
+  </div>
   <form>
     <input type="text" placeholder="Título" name="titulo" [(ngModel)]="post.titulo">
     <textarea placeholder="Qual a sua dúvida" [(ngModel)]="post.conteudo" name="conteudo"></textarea>
