@@ -4,13 +4,13 @@
         <img src="{{imageUrl}}">
       </div>
       <div class="info-wrapper">
-        <h4>{{user.email}}</h4>
+        <h4><a routerLink = '/profile/{{user.login}}'>{{user.nome}}</a></h4>
         <div class="title">{{user.areaAtuacao}}</div>
         <div class="skills" *ngFor="let habilidade of user.habilidades">
           {{habilidade}}
         </div>
         <div class="links">
-          <p>Ver perfil</p>
+          <p><a routerLink = '/profile/{{user.login}}'>Ver perfil</a></p>
           <span class="material-icons">
             arrow_forward
             </span>
