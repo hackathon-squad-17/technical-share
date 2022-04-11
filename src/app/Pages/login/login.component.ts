@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.userService.login(this.loginDetails);
-    this.router.navigate(['/forum']);
   }
 
 }
