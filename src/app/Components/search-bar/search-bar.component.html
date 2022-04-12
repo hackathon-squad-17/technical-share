@@ -1,4 +1,8 @@
 <section class="search-box container">
-  <input type="search" placeholder="{{placeholder}}">
-  <span class="material-icons">search</span>
+  <form>
+    <input type="search" placeholder="{{placeholder}}" [(ngModel)]="inputValue" name="search">
+    <button type="submit" (click)="search()">
+      <span class="material-icons">search</span>
+    </button>
+  </form>
 </section>

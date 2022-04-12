@@ -31,4 +31,14 @@ export class ForumComponent implements OnInit {
       this.filteredPosts = this.posts
     }
   }
+
+  searchPosts(inputValue:string){
+    if(inputValue){
+      this.filteredPosts = this.posts.filter(post => {
+        return post.titulo.toLowerCase().includes(inputValue) || post.conteudo.toLowerCase().includes(inputValue)
+      })
+    } else {
+      this.filteredPosts = this.posts
+    }
+  }
 }
