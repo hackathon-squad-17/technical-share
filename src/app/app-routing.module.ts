@@ -6,6 +6,7 @@ import { LoginComponent } from './Pages/login/login.component';
 import { PostComponent } from './Pages/post/post.component';
 import { ProfileListComponent } from './Pages/profile-list/profile-list.component';
 import { RegisterComponent } from './Pages/register/register.component';
+import { ProfileSearchComponent } from './Pages/search/profile-search/profile-search.component';
 import { UserProfileComponent } from './Pages/user-profile/user-profile.component';
 
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'profile/:login',
     component: UserProfileComponent
+  },
+  {
+    path:'search',
+    component: ProfileSearchComponent
   }
 ];
 

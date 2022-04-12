@@ -13,6 +13,7 @@ export class ForumComponent implements OnInit {
 
   posts:Post[] = [];
   filteredPosts:Post[] = [];
+  noResults: boolean = false;
 
   ngOnInit(): void {
     this.forumService.getAllPosts().subscribe((value:any) => {
@@ -25,8 +26,12 @@ export class ForumComponent implements OnInit {
   updateSelectedCategories(selectedCategories:string[]){
     if(selectedCategories.length){
       this.filteredPosts = this.posts.filter(post => {
+        this.noResults = false;
         return selectedCategories.includes(post.categoria)
       });
+      if(this.filteredPosts.length==0){
+        this.noResults = true;
+      }
     } else {
       this.filteredPosts = this.posts
     }
