@@ -22,7 +22,7 @@ export class RegisterSkillsComponent implements OnInit {
     this.userService.registerUserAbilities(this.selectedCategories).subscribe((x) => {
       let registeringUser:any = this.userService.getRegisteringUser();
       this.userService.login({loginOuEmail: registeringUser.login, senha: registeringUser.password});
-      this.router.navigate(['/forum'])
+      this.router.navigate(['/profiles'])
     }, (err) => {
       console.log(err)
     })

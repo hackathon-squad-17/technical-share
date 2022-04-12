@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       this.userService.login(this.loginDetails).subscribe(response => {
       this.userService.setUserName(response)
       window.sessionStorage.setItem('login', JSON.stringify(response));
-      this.router.navigate(['/forum']);
+      this.router.navigate(['/profiles']);
     },
     (response) => {
       this.loginError = response.error

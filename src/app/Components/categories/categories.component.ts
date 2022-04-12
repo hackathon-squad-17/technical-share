@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  @Input() maxSelections: number = 100;
   @Output() onChange = new EventEmitter<any>();
   categories = [];
   selectedCategories:string[] = [];
@@ -26,7 +27,9 @@ export class CategoriesComponent implements OnInit {
     if(abilityPresent > -1){
       this.selectedCategories.splice(abilityPresent, 1)
     } else{
-      this.selectedCategories.push(ability)
+      if(this.selectedCategories.length < this.maxSelections){
+        this.selectedCategories.push(ability)
+      }
     }
 
     this.onChange.emit(this.selectedCategories);

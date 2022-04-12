@@ -4,7 +4,7 @@
   </div>
   <div class="skills">
     <p>Escolha sua(s) área(s) de atuação</p>
-    <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
+    <app-categories (onChange)="updateSelectedCategories($event)" [maxSelections]="5"></app-categories>
     <button (click)="registerSkills()">
       Cadastre-se
     </button>
