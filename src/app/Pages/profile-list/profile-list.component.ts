@@ -9,10 +9,11 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./profile-list.component.css']
 })
 export class ProfileListComponent implements OnInit {
- 
+
 
   posts: any[] = [];
   users: any[] = [];
+  filteredUsers: any[] = [];
   loggedUser:any = ''
   loggedUserImageUrl:string = ''
   constructor(private forumService: ForumService, private userService: UserService) { }
@@ -24,7 +25,7 @@ export class ProfileListComponent implements OnInit {
 
     this.userService.getAllUsers().subscribe((value:any) => {
       this.users = value;
-      console.log(this.users);
+      this.filteredUsers = this.users;
     })
 
     this.userService.findUserByLogin(this.userService.getUserFromStorage()).subscribe((value:any) => {
@@ -32,8 +33,17 @@ export class ProfileListComponent implements OnInit {
     this.loggedUserImageUrl = `${environment.apiRoot}usuarios/foto-perfil?login=${value.login}`;
 
     });
+  }
 
-
+  updateSelectedCategories(selectedCategories:string[]){
+    if(selectedCategories.length){
+      this.filteredUsers = this.users.filter(user => {
+        console.log(user.habilidades)
+        return selectedCategories.some(r=> user.habilidades.includes(r))
+      });
+    } else {
+      this.filteredUsers = this.users
+    }
   }
 
 }
