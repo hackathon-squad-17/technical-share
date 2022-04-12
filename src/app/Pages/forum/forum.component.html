@@ -3,7 +3,7 @@
 
 <section class="container">
   <h3>Categorias:</h3>
-  <app-categories></app-categories>
+  <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
 </section>
 
 <section class="new-post">
@@ -12,8 +12,7 @@
 </section>
 
 <section class="posts">
-  <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
-  <button>Ver mais</button>
+  <app-forum-post *ngFor = "let post of filteredPosts" [post]="post"></app-forum-post>
 </section>
 
 <app-footer></app-footer>
