@@ -52,4 +52,6 @@ button:hover {
 
 form {
   display: flex;
+  flex-direction: column;
 }
+
