@@ -1,22 +1,26 @@
 <app-header></app-header>
-<main class="container">
+<main class="container" *ngIf="user">
   <section>
-    <img src="assets/img/foto-fernanda.png">
+    <div class="img-wrapper">
+      <img src={{imageUrl}}>
+    </div>
     <div class="name-title">
-      <h2>Fernanda Santos</h2>
-      <h4>Dev Front-End Trainee</h4>
+      <h2>{{user.nome}}</h2>
+      <h4>{{user.areaAtuacao}}</h4>
     </div>
     <h3>Habilidades</h3>
     <div class="abilities">
-      <div *ngFor="let ability of abilities">
+      <div *ngFor="let ability of user.habilidades">
         <p class="ability">{{ability}}</p>
       </div>
     </div>
     <div class="about">
-      <h3>Conheça mais sobre Fernanda</h3>
+      <h3>Conheça mais sobre {{user.nome}}</h3>
       <p>Sit odio natoque vitae risus id sem morbi elit porttitor. Velit ultrices tellus risus pretium vitae urna. Risus ornare quis sit eget eu. Duis sagittis venenatis, accumsan eu varius. Mattis condimentum diam sit elit, risus, nullam mauris morbi urna. Nisi in tempus, mi, nullam lorem feugiat id laoreet. </p>
     </div>
   </section>
-  <button>Agende uma mentoria</button>
+  <button *ngIf="checkUser"><a (click)="logout()">Sair</a></button>
+  <button *ngIf="!checkUser"><a href = "mailto:{{user.email}}">Entrar em contato</a></button>
+
 </main>
 <app-footer></app-footer>

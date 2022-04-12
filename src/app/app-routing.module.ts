@@ -22,7 +22,7 @@ const routes: Routes = [
     component: ForumComponent
   },
   {
-    path: 'post',
+    path: 'post/:id',
     component: PostComponent
   },
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'profile',
+    path: 'profile/:login',
     component: UserProfileComponent
   }
 ];

@@ -14,10 +14,19 @@ section {
   padding: 40px;
 }
 
-img {
-  width: 300px;
-  height: 300px;
+.img-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 50%;
   align-self: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
 }
 
 .name-title {
@@ -68,4 +77,8 @@ button {
   font-size: 24px;
   align-self: center;
   margin-top: 4rem;
+}
+
+a {
+  color: white;
 }

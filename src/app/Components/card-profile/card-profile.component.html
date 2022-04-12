@@ -1,16 +1,16 @@
 
     <div class="slide">
       <div class="img-wrapper">
-        <img [src]="slide.src">
+        <img src="{{imageUrl}}">
       </div>
       <div class="info-wrapper">
-        <h4>{{slide.nome}}</h4>
-        <div class="title">{{slide.title}}</div>
-        <div class="skills" *ngFor="let skill of slide.skills">
-          {{skill}}
+        <h4><a routerLink = '/profile/{{user.login}}'>{{user.nome}}</a></h4>
+        <div class="title">{{user.areaAtuacao}}</div>
+        <div class="skills" *ngFor="let habilidade of user.habilidades">
+          {{habilidade}}
         </div>
         <div class="links">
-          <p>Ver perfil</p>
+          <p><a routerLink = '/profile/{{user.login}}'>Ver perfil</a></p>
           <span class="material-icons">
             arrow_forward
             </span>

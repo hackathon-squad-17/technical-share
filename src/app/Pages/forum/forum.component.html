@@ -8,14 +8,11 @@
 
 <section class="new-post">
   <h4><span>Tem alguma dúvida? </span>Inicie uma discussão no nosso fórum!</h4>
-  <app-comment-box placeholder="Digite aqui a sua dúvida"></app-comment-box>
+  <app-post-creator></app-post-creator>
 </section>
 
 <section class="posts">
-  <app-forum-post></app-forum-post>
-  <app-forum-post></app-forum-post>
-  <app-forum-post></app-forum-post>
-  <app-forum-post></app-forum-post>
+  <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
   <button>Ver mais</button>
 </section>
 

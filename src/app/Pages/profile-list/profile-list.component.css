@@ -28,8 +28,18 @@
   width: 565px
 }
 
-.intro-text img {
-  width: 140px;
+.intro-text-img {
+  display: inline-block;
+  position: relative;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.intro-text-img img {
+  width: 100%;
+  height: auto;
 }
 
 .intro-img img {

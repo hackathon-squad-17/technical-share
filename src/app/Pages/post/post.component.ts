@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ForumService } from 'src/app/Services/forum.service';
 
 @Component({
   selector: 'app-post',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
+  idPost:any = null;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private forumService: ForumService) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+    this.forumService.getPostById(params['id']).subscribe(post => {
+        this.idPost = post
+      })
+    })
   }
 
 }

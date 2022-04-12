@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,15 +15,19 @@ import { CardProfileComponent } from './Components/card-profile/card-profile.com
 import { SearchBarComponent } from './Components/search-bar/search-bar.component';
 import { ForumComponent } from './Pages/forum/forum.component';
 import { ForumPostComponent } from './Components/forum-post/forum-post.component';
-import { CommentBoxComponent } from './Components/comment-box/comment-box.component';
-import { CommentPostComponent } from './Components/comment-post/comment-post.component';
+import { CommentCreatorComponent } from './Components/comment-creator/comment-creator.component';
+import { CommentComponent } from './Components/comment/comment.component';
 import { PostComponent } from './Pages/post/post.component';
+import { FormsModule } from '@angular/forms';
+import { PostCreatorComponent } from './Components/post-creator/post-creator.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { RegisterComponent } from './Pages/register/register.component';
 import { RegisterInfoComponent } from './Pages/register/register-info/register-info.component';
 import { RegisterRoleComponent } from './Pages/register/register-role/register-role.component';
 import { RegisterSkillsComponent } from './Pages/register/register-skills/register-skills.component';
+import { RegisterPictureComponent } from './Pages/register/register-picture/register-picture.component';
 import { UserProfileComponent } from './Pages/user-profile/user-profile.component';
+import { LoggedUserProfileComponent } from './pages/logged-user-profile/logged-user-profile/logged-user-profile.component';
 
 @NgModule({
   declarations: [
@@ -37,21 +42,26 @@ import { UserProfileComponent } from './Pages/user-profile/user-profile.componen
     SearchBarComponent,
     ForumComponent,
     ForumPostComponent,
-    CommentBoxComponent,
-    CommentPostComponent,
+    CommentCreatorComponent,
+    CommentComponent,
     PostComponent,
+    PostCreatorComponent,
     LoginComponent,
     RegisterComponent,
     RegisterInfoComponent,
     RegisterRoleComponent,
     RegisterSkillsComponent,
-    UserProfileComponent
+    RegisterPictureComponent,
+    UserProfileComponent,
+    LoggedUserProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+<div class="forum-cards" *ngIf="comentario">
+  <div class="forum-card">
+    <div class="post-info">
+      <div class="img-wrapper">
+        <img src="{{imageUrl}}">
+      </div>
+      <div class="post-wrapper">
+        <div class="post-header"><p>{{comentario.usuario.nome}}</p> <span>25min atrás</span></div>
+        <p>{{comentario.conteudoComentario}}</p>
+      </div>
+    </div>
+</div>

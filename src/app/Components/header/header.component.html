@@ -5,9 +5,9 @@
   <div class="header-wrapper">
     <ul>
       <li class="link">Ajuda</li>
-      <li><a routerLink = "/forum" class="link">Fórum</a></li>
-      <li a routerLink = "/profiles" class="link">Consultores</li>
-      <li><a routerLink = "/login" class="login">Entrar</a></li>
+      <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/login'}}" class="link" (click)="checksLogin()">Fórum</a></li>
+      <li><a routerLink="{{isLoggedIn == true ? '/profiles' : '/login'}}" class="link" (click)="checksLogin()">Consultores</a></li>
+      <li><a routerLink="{{getUserProfileLink()}}" class="login" (click)="checksLogin()">{{buttonState}}</a></li>
     </ul>
   </div>
   <div class="burger">

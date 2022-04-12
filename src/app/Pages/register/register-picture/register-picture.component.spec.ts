@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommentBoxComponent } from './comment-box.component';
+import { RegisterPictureComponent } from './register-picture.component';
 
-describe('CommentBoxComponent', () => {
-  let component: CommentBoxComponent;
-  let fixture: ComponentFixture<CommentBoxComponent>;
+describe('RegisterPictureComponent', () => {
+  let component: RegisterPictureComponent;
+  let fixture: ComponentFixture<RegisterPictureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentBoxComponent ]
+      declarations: [ RegisterPictureComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommentBoxComponent);
+    fixture = TestBed.createComponent(RegisterPictureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
