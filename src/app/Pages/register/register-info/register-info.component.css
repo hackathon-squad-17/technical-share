@@ -48,3 +48,13 @@ span {
   padding: 5px 20px;
   background-color: var(--primary);
 }
+
+.error {
+  font-size: 16px;
+  color: red;
+  margin-top: 16px;
+}
+
+#conf-password {
+  margin-bottom: 0;
+}

@@ -14,16 +14,7 @@ export class UserService {
   constructor(private http:HttpClient, private router: Router) {}
 
   login(loginDetails:LoginDetails){
-    return this.http.post(`${environment.apiRoot}usuarios/verificacao-login`, loginDetails, {responseType: 'text'}).subscribe(response => {
-      this.setUserName(response)
-      window.sessionStorage.setItem('login', JSON.stringify(response));
-      this.router.navigate(['/forum']);
-      console.log(response)
-    },
-    (response) => {
-      console.log(response)
-    }
-    )
+    return this.http.post(`${environment.apiRoot}usuarios/verificacao-login`, loginDetails, {responseType: 'text'})
   }
 
   logout(){
