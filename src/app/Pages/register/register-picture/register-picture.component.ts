@@ -41,4 +41,17 @@ export class RegisterPictureComponent implements OnInit {
     reader.readAsDataURL(file);
     this.onForward.emit();
   }
+
+  imageSrc: string='';
+  readURL(event:any) {
+    if (event.target.files && event.target.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = (event:any) => {
+            this.imageSrc = event.target.result;
+        }
+
+        reader.readAsDataURL(event.target.files[0]);
+    }
+}
 }

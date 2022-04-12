@@ -48,3 +48,8 @@ span {
   padding: 5px 20px;
   background-color: var(--primary);
 }
+
+img {
+  max-width: 150px;
+  height: 100%;
+}

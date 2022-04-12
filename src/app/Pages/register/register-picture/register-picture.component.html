@@ -7,7 +7,10 @@
         <h3>Escolha a sua foto de perfil:</h3>
         <input #imageInput
                type="file"
+               (change)="readURL($event)"
                accept="image/*">
+
+        <img id="blah" [src]="imageSrc || 'http://placehold.it/180'" alt="your image" />
     </div>
     <button (click)="submit(imageInput)"><span class="material-icons arrow">arrow_forward</span></button>
   </form>
