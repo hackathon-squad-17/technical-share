@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-comment',
@@ -11,7 +12,7 @@ export class CommentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.comentario.usuario.login}`
+    this.imageUrl = `${environment.apiRoot}usuarios/foto-perfil?login=${this.comentario.usuario.login}`
   }
 
 }

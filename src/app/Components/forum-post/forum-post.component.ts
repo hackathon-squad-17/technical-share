@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ForumService } from 'src/app/Services/forum.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-forum-post',
@@ -13,7 +13,7 @@ export class ForumPostComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit(): void {
-    this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.post.usuario.login}`;
+    this.imageUrl = `${environment.apiRoot}usuarios/foto-perfil?login=${this.post.usuario.login}`;
   }
 
 }

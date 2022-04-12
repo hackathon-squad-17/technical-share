@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from "rxjs";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,6 @@ export class ImageService {
   public uploadImage(image: File, usuarioLogin: string){
     const formData = new FormData();
     formData.append('image', image);
-    return this.http.post(`http://localhost:8080/usuarios/upload-foto?usuarioLogin=${usuarioLogin}`, formData);
+    return this.http.post(`${environment.apiRoot}usuarios/upload-foto?usuarioLogin=${usuarioLogin}`, formData);
   }
 }

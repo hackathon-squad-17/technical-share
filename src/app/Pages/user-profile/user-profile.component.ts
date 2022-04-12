@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/Services/user.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-user-profile',
@@ -19,7 +20,7 @@ export class UserProfileComponent implements OnInit {
         this.userService.findUserByLogin(params['login']).subscribe((value:any) => {
           console.log(params['login'])
           this.user = value;
-          this.imageUrl = `http://localhost:8080/usuarios/foto-perfil?login=${this.user.login}`;
+          this.imageUrl = `${environment.apiRoot}usuarios/foto-perfil?login=${this.user.login}`;
           if(this.user.login == this.userService.getUserFromStorage()){
             this.checkUser = true
           }

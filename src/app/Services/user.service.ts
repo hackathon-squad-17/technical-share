@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginDetails, UserRegisterInfo } from '../Models/user.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class UserService {
   constructor(private http:HttpClient, private router: Router) {}
 
   login(loginDetails:LoginDetails){
-    return this.http.post('http://localhost:8080/usuarios/verificacao-login', loginDetails, {responseType: 'text'}).subscribe(response => {
+    return this.http.post('${environment.apiRoot}usuarios/verificacao-login', loginDetails, {responseType: 'text'}).subscribe(response => {
       this.setUserName(response)
       window.sessionStorage.setItem('login', JSON.stringify(response));
       this.router.navigate(['/forum']);
@@ -39,7 +40,7 @@ export class UserService {
   }
 
   findUserByLogin(login: string){
-    return this.http.get(`http://localhost:8080/usuarios/encontra-usuario-login?login=${login}`)
+    return this.http.get(`${environment.apiRoot}usuarios/encontra-usuario-login?login=${login}`)
   }
 
   getUserName(){
@@ -60,28 +61,28 @@ export class UserService {
   }
 
   registerUserInfo(userRegisterInfo:UserRegisterInfo){
-    return this.http.post('http://localhost:8080/usuarios/novo-usuario', userRegisterInfo)
+    return this.http.post('${environment.apiRoot}usuarios/novo-usuario', userRegisterInfo)
   }
 
   registerUserRole(userRole:string){
-    return this.http.post('http://localhost:8080/usuarios/nova-area-atuacao', {
+    return this.http.post('${environment.apiRoot}usuarios/nova-area-atuacao', {
       login: this.registeringUser?.login,
       areaAtuacao: userRole
     })
   }
 
   getAvailableAbilities(){
-    return this.http.get('http://localhost:8080/habilidades/todas-habilidades')
+    return this.http.get('${environment.apiRoot}habilidades/todas-habilidades')
   }
 
   registerUserAbilities(abilities:string[]){
-    return this.http.post('http://localhost:8080/usuarios/novas-habilidades', {
+    return this.http.post('${environment.apiRoot}usuarios/novas-habilidades', {
       login: this.registeringUser?.login,
       habilidades: abilities
     })
   }
 
   getAllUsers(){
-    return this.http.get('http://localhost:8080/usuarios/todos-usuarios')
+    return this.http.get('${environment.apiRoot}usuarios/todos-usuarios')
   }
 }
