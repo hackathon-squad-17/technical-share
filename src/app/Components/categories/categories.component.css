@@ -15,9 +15,9 @@
   background-color: #FFEAE2;
   color: var(--primary);
   border-radius: 16px;
-  padding: 4px 44px;
+  padding: 4px 40px;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .category:hover {

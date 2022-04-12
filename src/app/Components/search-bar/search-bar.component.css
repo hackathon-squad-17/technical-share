@@ -1,11 +1,16 @@
 
-.search-box {
-  display: grid;
-  grid-template-columns: 1fr 100px;
+form {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  width: 100%;
+}
+
+.search-box {
   margin: 4rem auto;
   position: relative;
   max-width: 50vw;
+  width: 100%;
 }
 
 .search-box input {
@@ -16,13 +21,14 @@
   border-radius: 14px 0 0 14px;
   grid-column: 1;
   font-size: 24px;
+  width: 100%;
 }
 
 input:focus {
   outline: none;
 }
 
-.search-box span {
+.search-box button span {
   font-size: 40px;
   background-color: #EAEAEA;
   padding: 16px 30px;
@@ -33,6 +39,14 @@ input:focus {
 
 span {
   color: var(--primary);
+}
+
+button {
+  border: none;
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 14px 14px 0;
 }
 
 @media screen and (max-width: 800px) {

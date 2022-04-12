@@ -12,14 +12,21 @@ import { environment } from 'src/environments/environment';
 export class PostCreatorComponent implements OnInit {
   post:Post = new Post();
   imageUrl: string = '';
+  categories:[] = [];
   constructor(private forumService: ForumService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.imageUrl = `${environment.apiRoot}usuarios/foto-perfil?login=${this.userService.getUserFromStorage()}`;
+    this.userService.getAvailableAbilities().subscribe((listAbilities:any) => {
+      this.categories = listAbilities.map((ability: { habilidadePossivel: any; }) => {
+        return ability.habilidadePossivel
+      })
+    })
   }
 
   sendForm() {
     this.post.login = this.userService.getUserFromStorage();
+    console.log(this.categories)
     this.forumService.createPost(this.post).subscribe((x) => {
       console.log(x);
     });

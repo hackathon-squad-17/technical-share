@@ -13,7 +13,7 @@
     </div>
   </section>
 
-  <app-search-bar placeholder="Encontre mentores"></app-search-bar>
+  <app-search-bar placeholder="Encontre mentores" (onSearch)="handleSearch($event)"></app-search-bar>
 
   <section class="cards">
     <div class="title-wrapper">
@@ -32,13 +32,17 @@
 
   <section class="categories container">
     <h3>Você tem alguma dúvida? <span>Escolha o tema: </span></h3>
-    <app-categories></app-categories>
+    <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
    </section>
 
    <section class="profiles container">
     <h3>Conheça os nossos consultores</h3>
     <div class="slide-wrapper">
-        <app-card-profile *ngFor = "let user of users" class="slide" [user]="user"></app-card-profile>
+        <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
+    </div>
+    <div *ngIf="noResults" class="no-results">
+      <img src="assets/img/laranjo.png">
+      <p>Desculpe, não encontramos nenhum perfil com essa tag.</p>
     </div>
   </section>
 </main>

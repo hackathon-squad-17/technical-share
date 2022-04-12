@@ -1,0 +1,11 @@
+<app-header></app-header>
+<app-search-bar placeholder="Encontre mentores" (onSearch)="searchUsers($event)"></app-search-bar>
+<main>
+  <div class="slide-wrapper">
+    <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
+</div>
+<div *ngIf="noResults" class="no-results">
+  <img src="assets/img/laranjo.png">
+  <p>Desculpe, não encontramos nenhum perfil com essa tag.</p>
+</div>
+</main>

@@ -3,8 +3,16 @@
     <img src="{{imageUrl}}">
   </div>
   <form>
-    <input type="text" placeholder="Título" name="titulo" [(ngModel)]="post.titulo">
+    <input type="text" placeholder="Título" name="titulo" [(ngModel)]="post.titulo" >
     <textarea placeholder="Qual a sua dúvida" [(ngModel)]="post.conteudo" name="conteudo"></textarea>
+    <select [(ngModel)]="post.categoria" name="category"
+    >
+      <option
+        *ngFor="let category of categories"
+        [value]="category"
+        ngDefaultControl
+      >{{category}}</option>
+    </select>
     <button (click)=sendForm()>Publicar</button>
   </form>
 </div>
