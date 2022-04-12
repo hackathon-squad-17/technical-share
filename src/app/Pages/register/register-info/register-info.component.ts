@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { UserRegisterInfo } from 'src/app/Models/user.model';
+import { LoginDetails, UserRegisterInfo } from 'src/app/Models/user.model';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -32,6 +32,7 @@ export class RegisterInfoComponent implements OnInit {
   submit(){
     this.userService.registerUserInfo(this.userRegisterInfo).subscribe((e: any) => {
       this.userService.setRegisteringUser(this.userRegisterInfo)
+      window.sessionStorage.setItem('login', JSON.stringify(this.userRegisterInfo.login));
     }
 
       , (error: any) => console.log(error));
