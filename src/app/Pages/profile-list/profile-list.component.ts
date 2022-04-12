@@ -39,7 +39,7 @@ export class ProfileListComponent implements OnInit {
     if(selectedCategories.length){
       this.filteredUsers = this.users.filter(user => {
         console.log(user.habilidades)
-        return selectedCategories.some(r=> user.habilidades.includes(r))
+        return selectedCategories.every(r=> user.habilidades.includes(r))
       });
     } else {
       this.filteredUsers = this.users
