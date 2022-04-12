@@ -14,7 +14,7 @@ export class UserService {
   constructor(private http:HttpClient, private router: Router) {}
 
   login(loginDetails:LoginDetails){
-    return this.http.post('${environment.apiRoot}usuarios/verificacao-login', loginDetails, {responseType: 'text'}).subscribe(response => {
+    return this.http.post(`${environment.apiRoot}usuarios/verificacao-login`, loginDetails, {responseType: 'text'}).subscribe(response => {
       this.setUserName(response)
       window.sessionStorage.setItem('login', JSON.stringify(response));
       this.router.navigate(['/forum']);
@@ -61,28 +61,28 @@ export class UserService {
   }
 
   registerUserInfo(userRegisterInfo:UserRegisterInfo){
-    return this.http.post('${environment.apiRoot}usuarios/novo-usuario', userRegisterInfo)
+    return this.http.post(`${environment.apiRoot}usuarios/novo-usuario`, userRegisterInfo)
   }
 
   registerUserRole(userRole:string){
-    return this.http.post('${environment.apiRoot}usuarios/nova-area-atuacao', {
+    return this.http.post(`${environment.apiRoot}usuarios/nova-area-atuacao`, {
       login: this.registeringUser?.login,
       areaAtuacao: userRole
     })
   }
 
   getAvailableAbilities(){
-    return this.http.get('${environment.apiRoot}habilidades/todas-habilidades')
+    return this.http.get(`${environment.apiRoot}habilidades/todas-habilidades`)
   }
 
   registerUserAbilities(abilities:string[]){
-    return this.http.post('${environment.apiRoot}usuarios/novas-habilidades', {
+    return this.http.post(`${environment.apiRoot}usuarios/novas-habilidades`, {
       login: this.registeringUser?.login,
       habilidades: abilities
     })
   }
 
   getAllUsers(){
-    return this.http.get('${environment.apiRoot}usuarios/todos-usuarios')
+    return this.http.get(`${environment.apiRoot}usuarios/todos-usuarios`)
   }
 }

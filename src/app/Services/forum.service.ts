@@ -13,15 +13,15 @@ export class ForumService {
   }
 
   public createPost(post:Post){
-   return this.http.post('${environment.apiRoot}postagens/nova-postagem', post);
+   return this.http.post(`${environment.apiRoot}postagens/nova-postagem`, post);
   }
 
   public createComment(comment:Comment){
-    return this.http.post('${environment.apiRoot}comentarios/novo-comentario', comment);
+    return this.http.post(`${environment.apiRoot}comentarios/novo-comentario`, comment);
   }
 
   public getAllPosts() {
-    return this.http.get('${environment.apiRoot}postagens/todas-postagens');
+    return this.http.get(`${environment.apiRoot}postagens/todas-postagens`);
   }
 
   public getPostById(id: number){
