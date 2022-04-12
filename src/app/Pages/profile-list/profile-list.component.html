@@ -13,7 +13,7 @@
     </div>
   </section>
 
-  <app-search-bar placeholder="Encontre mentores"></app-search-bar>
+  <app-search-bar placeholder="Encontre mentores" (onSearch)="handleSearch($event)"></app-search-bar>
 
   <section class="cards">
     <div class="title-wrapper">
@@ -39,6 +39,10 @@
     <h3>Conheça os nossos consultores</h3>
     <div class="slide-wrapper">
         <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
+    </div>
+    <div *ngIf="noResults" class="no-results">
+      <img src="assets/img/laranjo.png">
+      <p>Desculpe, não encontramos nenhum perfil com essa tag.</p>
     </div>
   </section>
 </main>

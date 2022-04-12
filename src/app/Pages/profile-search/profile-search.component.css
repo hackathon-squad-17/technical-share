@@ -8,3 +8,21 @@
 .slide {
   width: 30%;
 }
+
+.no-results {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+
+.no-results img {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.no-results p {
+  text-align: center;
+  width: 400px;
+}

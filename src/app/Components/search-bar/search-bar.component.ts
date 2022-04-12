@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
   @Input() placeholder: string = '';
-  @Output() onChange = new EventEmitter<any>();
+  @Output() onSearch = new EventEmitter<any>();
   inputValue:string = '';
 
   constructor() { }
@@ -16,6 +16,6 @@ export class SearchBarComponent implements OnInit {
   }
 
   search(){
-    this.onChange.emit(this.inputValue);
+    this.onSearch.emit(this.inputValue);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ForumService } from 'src/app/Services/forum.service';
 import { UserService } from 'src/app/Services/user.service';
 import { environment } from 'src/environments/environment';
@@ -9,14 +10,14 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./profile-list.component.css']
 })
 export class ProfileListComponent implements OnInit {
-
-
   posts: any[] = [];
   users: any[] = [];
   filteredUsers: any[] = [];
   loggedUser:any = ''
   loggedUserImageUrl:string = ''
-  constructor(private forumService: ForumService, private userService: UserService) { }
+  noResults:boolean = false
+
+  constructor(private forumService: ForumService, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.forumService.getAllPosts().subscribe((value:any) => {
@@ -38,12 +39,19 @@ export class ProfileListComponent implements OnInit {
   updateSelectedCategories(selectedCategories:string[]){
     if(selectedCategories.length){
       this.filteredUsers = this.users.filter(user => {
-        console.log(user.habilidades)
+        this.noResults = false;
         return selectedCategories.every(r=> user.habilidades.includes(r))
       });
+      if(this.filteredUsers.length==0){
+        this.noResults = true;
+      }
     } else {
+      this.noResults = false;
       this.filteredUsers = this.users
     }
   }
 
+  handleSearch(inputValue: string){
+    this.router.navigate([`/search`],{queryParams:{search:inputValue}})
+  }
 }
