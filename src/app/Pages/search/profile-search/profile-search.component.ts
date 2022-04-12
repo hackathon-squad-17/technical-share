@@ -22,7 +22,7 @@ export class ProfileSearchComponent implements OnInit {
   searchUsers(inputValue:string){
     if(inputValue){
       this.filteredUsers = this.users.filter(user => {
-        return user.nome.toLowerCase().includes(inputValue)
+        return user.nome.toLowerCase().includes(inputValue) || user.areaAtuacao.toLowerCase().includes(inputValue)
       })
     } else {
       this.filteredUsers = this.users

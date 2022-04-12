@@ -2,6 +2,6 @@
 <app-search-bar placeholder="Encontre mentores" (onChange)="searchUsers($event)"></app-search-bar>
 <main>
   <div class="slide-wrapper">
-    <app-card-profile *ngFor = "let user of users" class="slide" [user]="user"></app-card-profile>
+    <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
 </div>
 </main>
