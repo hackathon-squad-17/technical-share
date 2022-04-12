@@ -1,9 +1,9 @@
 <app-header></app-header>
-<app-search-bar placeholder="Encontre tópicos"></app-search-bar>
+<app-search-bar placeholder="Pesquise por títulos ou conteúdos" (onSearch)="searchPosts($event)"></app-search-bar>
 
 <section class="container">
-  <h3>Categorias:</h3>
-  <app-categories></app-categories>
+  <h3 class="container">Categorias:</h3>
+  <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
 </section>
 
 <section class="new-post">
@@ -12,8 +12,11 @@
 </section>
 
 <section class="posts">
-  <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
-  <button>Ver mais</button>
+  <app-forum-post *ngFor = "let post of filteredPosts" [post]="post"></app-forum-post>
+  <div *ngIf="noResults" class="no-results">
+    <img src="assets/img/laranjo.png">
+    <p>Desculpe, não encontramos nenhum post com essa categoria.</p>
+  </div>
 </section>
 
 <app-footer></app-footer>
