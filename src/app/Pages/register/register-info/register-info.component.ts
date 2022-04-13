@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginDetails, UserRegisterInfo } from 'src/app/Models/user.model';
+import { RegistrationService } from 'src/app/Services/registration.service';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -8,15 +9,16 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./register-info.component.css']
 })
 export class RegisterInfoComponent implements OnInit {
-
   @Output() onForward = new EventEmitter<any>();
   userRegisterInfo = new UserRegisterInfo();
   confirmationPassword = '';
   validPassword = true;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+   this.userRegisterInfo = this.registrationService.getRegisteringUser();
+   this.userRegisterInfo.password = '';
   }
 
   checkPassword(){
@@ -29,13 +31,8 @@ export class RegisterInfoComponent implements OnInit {
     }
   }
 
-  submit(){
-    this.userService.registerUserInfo(this.userRegisterInfo).subscribe((e: any) => {
-      this.userService.setRegisteringUser(this.userRegisterInfo)
-      window.sessionStorage.setItem('login', JSON.stringify(this.userRegisterInfo.login));
-    }
-
-      , (error: any) => console.log(error));
+  goForward(){
+    this.registrationService.setRegisteringUser(this.userRegisterInfo)
     this.onForward.emit();
   }
 

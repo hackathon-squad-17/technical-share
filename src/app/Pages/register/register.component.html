@@ -4,7 +4,7 @@
   <h3>Já tem uma conta? <a routerLink="/login">Faça o login</a></h3>
 </main>
 <app-register-info *ngIf="registerState=='info'" (onForward)="registerState='picture'"></app-register-info>
-<app-register-picture *ngIf="registerState=='picture'" (onForward)="registerState='role'"></app-register-picture>
-<app-register-role *ngIf="registerState=='role'" (onForward)="registerState='skill'"></app-register-role>
-<app-register-skills *ngIf="registerState=='skill'"></app-register-skills>
+<app-register-picture *ngIf="registerState=='picture'" (onForward)="registerState='role'" (onBackward)="registerState='info'"></app-register-picture>
+<app-register-role *ngIf="registerState=='role'" (onForward)="registerState='skill'" (onBackward)="registerState='picture'"></app-register-role>
+<app-register-skills *ngIf="registerState=='skill'" (onBackward)="registerState='role'"></app-register-skills>
 <app-footer></app-footer>

@@ -7,11 +7,12 @@
         <h3>Escolha a sua foto de perfil:</h3>
         <input #imageInput
                type="file"
-               (change)="readURL($event)"
+               (change)="previewURL($event)"
                accept="image/*">
 
         <img id="profile" [src]="imageSrc" alt="Sua foto de perfil" />
     </div>
-    <button (click)="submit(imageInput)"><span class="material-icons arrow">arrow_forward</span></button>
+    <button (click)="goBack(imageInput)"><span class="material-icons arrow">arrow_back</span></button>
+    <button (click)="goForward(imageInput)"><span class="material-icons arrow">arrow_forward</span></button>
   </form>
 </section>
