@@ -46,6 +46,10 @@ button:hover {
   transition: 1s
 }
 
+a {
+  color: white;
+}
+
 .main-img img{
   width: 670px;
 }
