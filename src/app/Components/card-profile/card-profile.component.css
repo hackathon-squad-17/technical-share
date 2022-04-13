@@ -7,7 +7,7 @@
 .img-wrapper img {
   border-radius: 16px;
   width: 100%;
-  height: 600px;
+  height: 580px;
   object-fit: cover;
 }
 
@@ -56,33 +56,19 @@ h4 {
 
 }
 
-.info-wrapper .links p,
-.info-wrapper .links span {
+.info-wrapper .links button{
   cursor: pointer;
-}
-.info-wrapper .links p{
-  font-weight: 600;
-}
-
-.info-wrapper .links p:first-of-type:hover{
-  text-decoration: underline;
-}
-
-.info-wrapper .links span {
-  background-color: var(--primary);
+  background-color: #FFEAE2;
+  border: none;
   border-radius: 16px;
-  border: 1px solid var(--light-primary);
-  color: var(--white);
-  font-weight: 600;
-  height: 35px;
-  vertical-align: middle;
-  margin: 0;
-  padding: 5px 20px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 20px;
 }
 
-.info-wrapper .links span:hover {
-  background-color: var(--light-primary);
-  transition: 1s;
+
+.links a {
+  color: var(--primary);
 }
 
 a {

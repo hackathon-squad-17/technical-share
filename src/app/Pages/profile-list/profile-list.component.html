@@ -17,7 +17,7 @@
 
   <section class="cards">
     <div class="title-wrapper">
-      <img src="assets/img/detalhe-maior.png">
+      <img src="assets/img/detalhe-titulo.png">
       <h3>Destaques em <span>Front-End</span></h3>
     </div>
     <div class="carousel container">
@@ -25,19 +25,32 @@
     </div>
   </section>
 
-  <section class="forum container">
-    <h3>Populares no <span>Fórum</span></h3>
-    <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
+  <section>
+    <div class="title-wrapper">
+      <img src="assets/img/detalhe-titulo.png">
+      <h3>Populares no <span>Fórum</span></h3>
+    </div>
+    <div class="categories container">
+      <app-forum-post *ngFor = "let post of posts" [post]="post"></app-forum-post>
+    </div>
   </section>
 
-  <section class="categories container">
-    <h3>Você tem alguma dúvida? <span>Escolha o tema: </span></h3>
-    <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
+  <section>
+    <div class="title-wrapper">
+      <img src="assets/img/detalhe-titulo.png">
+      <h3>Você tem alguma dúvida? <span>Encontre consultores por suas habilidades: </span></h3>
+    </div>
+    <div class="categories container">
+      <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
+    </div>
    </section>
 
-   <section class="profiles container">
-    <h3>Conheça os nossos consultores</h3>
-    <div class="slide-wrapper">
+   <section>
+    <div class="title-wrapper">
+      <img src="assets/img/detalhe-titulo.png">
+      <h3>Conheça os nossos consultores</h3>
+    </div>
+    <div class="profiles container slide-wrapper" >
         <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
     </div>
     <div *ngIf="noResults" class="no-results">
