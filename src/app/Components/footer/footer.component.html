@@ -1,5 +1,7 @@
 <footer>
   <div *ngFor="let logo of logos">
-    <img src="assets/img/{{logo}}.png">
+    <a href={{logo.url}}>
+      <img src="assets/img/{{logo.logo}}.png">
+    </a>
   </div>
 </footer>

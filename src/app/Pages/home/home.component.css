@@ -9,7 +9,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 
 .intro-title {
@@ -46,6 +46,10 @@ button:hover {
   transition: 1s
 }
 
+a {
+  color: white;
+}
+
 .main-img img{
   width: 670px;
 }
@@ -54,21 +58,22 @@ button:hover {
 /* HOW IT WORKS SECTION */
 
 .how-it-works-title {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
-h2 {
+h3 {
   font-size: 36px;
   font-weight: 400;
 }
 
 h3 span {
   color: var(--primary);
+  font-size: 36px;
 }
 
 .cards {
@@ -82,8 +87,8 @@ h3 span {
 }
 
 .card {
-  width: 440px;
-  height: 414px;
+  width: 352px;
+  height: 322px;
   font-size: 24px;
   display: flex;
   justify-content: center;
@@ -107,15 +112,25 @@ h3 span {
 }
 
 /* MENTORING SECTION */
+
+.mentoring {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
 .mentoring-title {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .mentoring-title h3 {
   align-self: center;
-  margin-top: 10rem;
+  margin-top: 12rem;
   margin-bottom: 5rem;
 }
 
@@ -123,25 +138,45 @@ h3 span {
   align-self: center;
 }
 
+.mentoring-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mentoring-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .mentoring-content {
   font-size: 28px;
   display: grid;
-  grid-template-columns: 520px 70px 520px;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
+  grid-template-columns: 600px 100px 600px;
   margin-top: 96px;
+  justify-items: center;
+  align-items: center;
+}
+
+.mentoring-content p:first-of-type {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .vertical-line {
   height: 178px;
   width: 1px;
   background-color: var(--black);
-  margin: 0 10px;
+  align-self: center;
+
 }
 
 .mentoring button {
-  margin-top: 3rem;
-  align-self: start;
+  margin: 8rem auto 0 auto;
+  align-self: center;
 }
 
 .categories h3 {
@@ -153,45 +188,43 @@ h3 span {
 
 
 /* FCAMARA SECTION */
-
-.container {
-  margin: 0 5rem;
+.companies{
+  margin-top: 9rem;
 }
 
-.fcamara {
-  margin-top: 10rem;
-  font-size: 24px;
+.card-company {
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 1fr;
+  border-radius: 32px;
+  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  padding: 32px;
+  width: 75%;
 }
 
-.fcamara-wrapper, .technical-wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
+.logo{
+  grid-column: 2;
 }
 
-.fcamara img:first-of-type {
-  margin-bottom: 4rem;
+.img-fcamara{
+  grid-row: 2;
+  grid-column: 1;
 }
 
-hr {
-  width: 140px;
+.card-company p {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 26px;
 }
 
-/* TECHNICAL SHARE SECTION */
-.technical-share span {
-  font-weight: 700;
+.card-company h4{
+ font-size: 48px;;
 }
 
-.technical-share h3 {
-  margin: 5rem 0 2rem 0;
-  font-size: 48px;
-  font-weight: 400;
+.card-company span {
+  color: var(--primary);
 }
-
-.technical-share p {
-  font-size: 28px;
-}
-
 
 @media screen and (max-width: 800px) {
   .main-img {
