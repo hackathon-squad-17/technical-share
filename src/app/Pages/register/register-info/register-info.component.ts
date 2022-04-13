@@ -17,6 +17,8 @@ export class RegisterInfoComponent implements OnInit {
   constructor(private userService: UserService, private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
    this.userRegisterInfo = this.registrationService.getRegisteringUser();
    this.userRegisterInfo.password = '';
   }

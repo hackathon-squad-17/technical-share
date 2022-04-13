@@ -14,6 +14,7 @@ export class RegisterRoleComponent implements OnInit {
   constructor(private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.userRole = this.registrationService.getUserRole();
   }
 

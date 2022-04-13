@@ -15,7 +15,7 @@ export class RegisterSkillsComponent implements OnInit {
   @Output() onBackward = new EventEmitter<any>();
 
   ngOnInit(): void {
-   
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   updateSelectedCategories(event: string[]){

@@ -15,6 +15,7 @@ export class RegisterPictureComponent implements OnInit {
   constructor(private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
   }
 

@@ -85,12 +85,18 @@ export class RegistrationService {
 
   completeRegistration(){
     if(this.registrationIsValid()){
+      console.log("registration is valid")
     this.registerUserInfo().subscribe(() => {
+      console.log("userinfo is valid")
       this.registerProfileImage().subscribe(() => {
+        console.log("image is valid")
         this.registerUserRole().subscribe(() => {
+          console.log("user role is valid")
           this.registerUserAbilities().subscribe(() => {
-            this.userService.login({loginOuEmail: this.userRegisterInfo.login, senha: this.userRegisterInfo.password});
-            this.router.navigate(['/profiles'])
+            console.log("userabilities is valid")
+            this.userService.login({loginOuEmail: this.userRegisterInfo.login, senha: this.userRegisterInfo.password}).subscribe(()=>{
+              this.router.navigate(['/profiles'])
+            });
           })
         })
       })
