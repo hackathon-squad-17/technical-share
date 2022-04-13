@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RegistrationService } from 'src/app/Services/registration.service';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -8,19 +9,22 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class RegisterRoleComponent implements OnInit {
   @Output() onForward = new EventEmitter<any>();
+  @Output() onBackward = new EventEmitter<any>();
   userRole: string = '';
-  constructor(private userService: UserService) { }
+  constructor(private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+    this.userRole = this.registrationService.getUserRole();
   }
 
-  submit(){
-    this.userService.registerUserRole(this.userRole).subscribe(() => {
-      this.onForward.emit();
-      }, (error) => {
-        console.log(error);
-      }
-    )
+  goForward(){
+    this.registrationService.setUserRole(this.userRole)
+    this.onForward.emit();
+  }
+
+  goBack(){
+    this.registrationService.setUserRole(this.userRole)
+    this.onBackward.emit();
   }
 
 }

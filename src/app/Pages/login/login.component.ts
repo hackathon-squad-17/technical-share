@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { LoginDetails } from 'src/app/Models/user.model';
 import { UserService } from 'src/app/Services/user.service';
 
@@ -20,13 +21,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-
-      this.userService.login(this.loginDetails).subscribe(response => {
-      this.userService.setUserName(response)
-      window.sessionStorage.setItem('login', JSON.stringify(response));
-      this.router.navigate(['/profiles']);
-    },
-    (response) => {
+    this.userService.login(this.loginDetails).subscribe((response) => {
       this.loginError = response.error
-  })
-}}
+    }
+    )
+  }
+}

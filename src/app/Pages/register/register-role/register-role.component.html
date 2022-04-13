@@ -7,7 +7,8 @@
       <label for="role">Escreva seu atual cargo na FCamara</label>
       <input type="text" placeholder="Ex: Dev Front-End Pleno" name="role" id="role" required [(ngModel)]="userRole">
     </div>
-    <button (click)="submit()">
+    <button (click)="goBack()"><span class="material-icons arrow">arrow_back</span></button>
+    <button (click)="goForward()">
       <span class="material-icons arrow">
         arrow_forward
       </span>

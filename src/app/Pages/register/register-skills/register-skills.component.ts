@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserRegisterInfo } from 'src/app/Models/user.model';
+import { RegistrationService } from 'src/app/Services/registration.service';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -9,22 +10,24 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./register-skills.component.css']
 })
 export class RegisterSkillsComponent implements OnInit {
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private registrationService: RegistrationService, private router: Router) { }
   selectedCategories:string[] = [];
+  @Output() onBackward = new EventEmitter<any>();
+
   ngOnInit(): void {
+   
   }
 
   updateSelectedCategories(event: string[]){
     this.selectedCategories = event
   }
 
-  registerSkills(){
-    this.userService.registerUserAbilities(this.selectedCategories).subscribe((x) => {
-      let registeringUser:any = this.userService.getRegisteringUser();
-      this.userService.login({loginOuEmail: registeringUser.login, senha: registeringUser.password});
-      this.router.navigate(['/profiles'])
-    }, (err) => {
-      console.log(err)
-    })
+  goBack(){
+    this.registrationService.setUserAbilities(this.selectedCategories)
+    this.onBackward.emit();
+  }
+
+  completeRegistration(){
+    this.registrationService.completeRegistration()
   }
 }

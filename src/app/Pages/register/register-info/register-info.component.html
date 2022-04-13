@@ -24,6 +24,6 @@
       <input type="password" placeholder="******" name="conf-password" id="conf-password" required [(ngModel)]="confirmationPassword" (change)="checkPassword()"/>
       <p *ngIf="!validPassword" class="error">A senha deve ser igual.</p>
     </div>
-    <button (click)="form.checkValidity()? submit() : null" type="submit"><span class="material-icons arrow">arrow_forward</span></button>
+    <button (click)="form.checkValidity()? goForward() : null" type="submit"><span class="material-icons arrow">arrow_forward</span></button>
   </form>
 </section>

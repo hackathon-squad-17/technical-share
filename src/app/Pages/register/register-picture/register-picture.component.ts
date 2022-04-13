@@ -1,9 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ImageService } from 'src/app/Services/image-service.service';
+import { RegistrationService } from 'src/app/Services/registration.service';
 import { UserService } from 'src/app/Services/user.service';
-class ImageSnippet {
-  constructor(public src: string, public file: File) {}
-}
 @Component({
   selector: 'app-register-picture',
   templateUrl: './register-picture.component.html',
@@ -11,39 +9,16 @@ class ImageSnippet {
 })
 export class RegisterPictureComponent implements OnInit {
   @Output() onForward = new EventEmitter<any>();
+  @Output() onBackward = new EventEmitter<any>();
+  imageSrc: string='';
 
-  image?:File;
-  constructor(private imageService: ImageService, private userService: UserService) { }
+  constructor(private registrationService: RegistrationService) { }
 
   ngOnInit(): void {
+
   }
 
-  submit(imageInput: any){
-    const file: File = imageInput.files[0];
-    const reader = new FileReader();
-
-    reader.addEventListener('load', (event: any) => {
-
-      let selectedFile = new ImageSnippet(event.target.result, file);
-      let username:string | undefined = this.userService.getRegisteringUser()?.login;
-      console.log(username)
-
-      // TODO consertar ?? tipagem
-     this.imageService.uploadImage(selectedFile.file, username??'').subscribe(
-        (res) => {
-
-        },
-        (err) => {
-
-        })
-    });
-
-    reader.readAsDataURL(file);
-    this.onForward.emit();
-  }
-
-  imageSrc: string='';
-  readURL(event:any) {
+  previewURL(event:any) {
     if (event.target.files && event.target.files[0]) {
         var reader = new FileReader();
 
@@ -53,5 +28,17 @@ export class RegisterPictureComponent implements OnInit {
 
         reader.readAsDataURL(event.target.files[0]);
     }
-}
+  }
+
+  goBack(imageInput:any){
+    this.registrationService.setImage(imageInput);
+    this.onBackward.emit();
+  }
+
+  goForward(imageInput:any){
+    this.registrationService.setImage(imageInput);
+    this.onForward.emit();
+  }
+
+
 }
