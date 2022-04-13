@@ -28,6 +28,7 @@ export class RegisterSkillsComponent implements OnInit {
   }
 
   completeRegistration(){
-    this.registrationService.completeRegistration()
+    this.registrationService.setUserAbilities(this.selectedCategories)
+    this.registrationService.completeRegistration();
   }
 }

@@ -73,7 +73,7 @@ export class RegistrationService {
 
   registerUserAbilities(){
     return this.http.post(`${environment.apiRoot}usuarios/novas-habilidades`, {
-      login: this.userRegisterInfo?.login,
+      login: this.userRegisterInfo.login,
       habilidades: this.userAbilities
     })
   }
