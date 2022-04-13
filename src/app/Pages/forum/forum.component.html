@@ -1,22 +1,26 @@
 <app-header></app-header>
 <app-search-bar placeholder="Pesquise por títulos ou conteúdos" (onSearch)="searchPosts($event)"></app-search-bar>
 
-<section class="container">
-  <h3 class="container">Categorias:</h3>
-  <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
-</section>
+<main class="page-grid">
+  <div class="posts-wrapper">
+    <section class="new-post">
+      <h4><span>Tem alguma dúvida? </span>Inicie uma discussão no nosso fórum!</h4>
+      <button>Publique no fórum</button>
+    </section>
 
-<section class="new-post">
-  <h4><span>Tem alguma dúvida? </span>Inicie uma discussão no nosso fórum!</h4>
-  <app-post-creator></app-post-creator>
-</section>
-
-<section class="posts">
-  <app-forum-post *ngFor = "let post of filteredPosts" [post]="post"></app-forum-post>
-  <div *ngIf="noResults" class="no-results">
-    <img src="assets/img/laranjo.png">
-    <p>Desculpe, não encontramos nenhum post com essa categoria.</p>
+    <section class="posts">
+      <app-forum-post *ngFor = "let post of filteredPosts" [post]="post"></app-forum-post>
+      <div *ngIf="noResults" class="no-results">
+        <img src="assets/img/laranjo.png">
+        <p>Desculpe, ainda não possuímos nenhuma publicação nessa categoria. Tente um novo termo ou <span>comece uma nova discussão.</span></p>
+      </div>
+    </section>
   </div>
-</section>
+
+  <section class="categorias">
+    <h3 class="container">Todas as categorias:</h3>
+    <app-categories (onChange)="updateSelectedCategories($event)"></app-categories>
+  </section>
+</main>
 
 <app-footer></app-footer>

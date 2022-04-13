@@ -17,10 +17,8 @@
           </span>
           <p>{{post.comentarios.length}}</p>
       </div>
-      <button a routerLink = '/post/{{post.id}}' *ngIf="router.url == '/forum'">
-        <span class="material-icons arrow">
-          arrow_forward
-          </span>
+      <button a routerLink = '/post/{{post.id}}'>
+          Leia mais
       </button>
     </div>
   </div>

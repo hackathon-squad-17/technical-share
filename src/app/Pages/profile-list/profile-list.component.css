@@ -54,6 +54,7 @@ span {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-bottom: 1rem;
 }
 
 .cards {
@@ -70,6 +71,10 @@ h3 {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.container {
+  margin-bottom: 6rem;
 }
 
 .slide {

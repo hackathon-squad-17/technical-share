@@ -4,14 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .forum-card {
   box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
   padding: 40px;
   border-radius: 16px;
-  width: 1100px;
+  width: 950px;
 }
 
 .post-info {
@@ -27,8 +27,8 @@
 .img-wrapper {
   display: inline-block;
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   overflow: hidden;
   border-radius: 50%;
   flex-shrink: 0;
@@ -91,10 +91,18 @@ a:hover {
 }
 
 button {
-  background-color: transparent;
+  background-color: #FFEAE2;
+  color: var(--primary);
   border: none;
+  border-radius: 16px;
+  padding: 4px 30px;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--primary);
 }
 
 h4 {
-  font-size: 36px;
+  font-size: 32px;
 }

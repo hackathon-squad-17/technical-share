@@ -12,8 +12,8 @@
 }
 
 .category {
-  background-color: #FFEAE2;
-  color: var(--primary);
+  background-color: #EBEBF2;
+  color: #36357E;
   border-radius: 16px;
   padding: 4px 40px;
   text-align: center;
@@ -21,13 +21,13 @@
 }
 
 .category:hover {
-  background-color: var(--primary);
+  background-color: #36357E;
   color: white;
   cursor: pointer;
 }
 
 .category-selected {
-  background-color: var(--primary);
+  background-color: #36357E;
   color: white;
   cursor: pointer;
 }
