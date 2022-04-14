@@ -3,6 +3,9 @@
 <app-header></app-header>
 <main class="container" *ngIf="user">
   <section>
+    <span  (click)="showingModal()" class="material-icons">
+      mode_edit
+      </span>
     <div class="img-wrapper">
       <img src={{imageUrl}}>
     </div>
@@ -28,6 +31,5 @@
 
   <button *ngIf="checkUser"><a (click)="logout()">Sair</a></button>
   <button *ngIf="!checkUser"><a href = "mailto:{{user.email}}">Entrar em contato</a></button>
-  <button (click)="showingModal()">Editar</button>
 </main>
 <app-footer></app-footer>
