@@ -1,0 +1,10 @@
+<main class="modal">
+  <div class="edit">
+    <h2>Atualize os seus dados</h2>
+    <form>
+      <input type="text" name="name" placeholder="Nome" [(ngModel)]="user.nome">
+      <app-categories [selectedCategories]="user.habilidades"></app-categories>
+      <button type="submit" (click)="sendChanges()" class="btn">Editar</button>
+    </form>
+  </div>
+</main>

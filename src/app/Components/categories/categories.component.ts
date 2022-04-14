@@ -10,7 +10,7 @@ export class CategoriesComponent implements OnInit {
   @Input() maxSelections: number = 100;
   @Output() onChange = new EventEmitter<any>();
   categories = [];
-  selectedCategories:string[] = [];
+  @Input() selectedCategories:string[] = [];
 
   constructor(private userService: UserService) { }
 

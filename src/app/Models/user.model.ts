@@ -9,3 +9,12 @@ export class UserRegisterInfo {
   password:string = '';
   email:string = '';
 }
+
+export class User {
+  areaAtuacao:string = '';
+  email: string = '';
+  habilidades:string[] = [];
+  login:string = '';
+  nome:string = '';
+  sobreMim:string = '';
+}

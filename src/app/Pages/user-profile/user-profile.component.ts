@@ -12,7 +12,7 @@ export class UserProfileComponent implements OnInit {
   user: any;
   userId:number = 0;
   checkUser:boolean = false;
-  imageUrl:string = ''
+  imageUrl:string = '';
   constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -33,7 +33,14 @@ export class UserProfileComponent implements OnInit {
   }
 
 
+  showModal = false;
 
+  showingModal(){
+    this.showModal = true;
+  }
 
+  hidingModal(){
+    this.showModal = false;
+  }
 
 }

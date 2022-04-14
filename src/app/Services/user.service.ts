@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginDetails, UserRegisterInfo } from '../Models/user.model';
+import { LoginDetails, User, UserRegisterInfo } from '../Models/user.model';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 
@@ -58,5 +58,10 @@ export class UserService {
 
   getAllUsers(){
     return this.http.get(`${environment.apiRoot}usuarios/todos-usuarios`)
+  }
+
+  editUser(user:User){
+    console.log(user)
+    return this.http.put(`${environment.apiRoot}usuarios/atualiza-usuario`, user)
   }
 }

@@ -1,3 +1,5 @@
+<app-edit-user *ngIf = "showModal" [user]="user" (onCancelClick)="hidingModal()"></app-edit-user>
+
 <app-header></app-header>
 <main class="container" *ngIf="user">
   <section>
@@ -5,7 +7,7 @@
       <img src={{imageUrl}}>
     </div>
     <div class="name-title">
-      <h2>{{user.nome}}</h2>
+      <h2>{{user.name}}</h2>
       <h4>{{user.areaAtuacao}}</h4>
     </div>
     <h3>Habilidades</h3>
@@ -23,8 +25,9 @@
       <p>{{user.email}}</p>
     </div>
   </section>
+
   <button *ngIf="checkUser"><a (click)="logout()">Sair</a></button>
   <button *ngIf="!checkUser"><a href = "mailto:{{user.email}}">Entrar em contato</a></button>
-
+  <button (click)="showingModal()">Editar</button>
 </main>
 <app-footer></app-footer>
