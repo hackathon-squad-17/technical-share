@@ -15,7 +15,7 @@ h3 {
 }
 
 .posts-wrapper {
-  min-width: 920px;
+  min-width: 950px;
 }
 
 .new-post {
@@ -51,6 +51,12 @@ button:hover {
 
 span {
   color: var(--primary);
+}
+
+.post-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .no-results {

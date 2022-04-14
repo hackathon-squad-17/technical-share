@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  margin-bottom: 3rem;;
 }
 
 .forum-card {
@@ -47,6 +46,7 @@
 
 .post-content {
   margin-top: 24px;
+  font-size: 20px;
 }
 
 .post-details {

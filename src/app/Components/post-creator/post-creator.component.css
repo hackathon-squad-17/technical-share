@@ -17,9 +17,11 @@
 
 .comment {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 100px 1fr 1fr 50px ;
+  height: 600px;
+  width: 800px;
   gap: 20px;
-  padding: 32px;
+  padding: 50px;
   background-color: white;
   border-radius: 16px;
 }
@@ -58,11 +60,24 @@
 textarea, input {
   border: none;
   resize: none;
-  min-width: 520px;
+  width: 100%;
   align-self: center;
   font-size: 18px;
   font-weight: 400;
-  color: #938E8E;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+textarea {
+  height: 130px;
+}
+
+hr {
+  margin-top: 10px;
+  padding: 0;
+  height: 1px;
 }
 
 select {

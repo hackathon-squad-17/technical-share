@@ -1,29 +1,33 @@
 <form>
-<div class="modal">
-  <div class="comment">
-    <div class="title-wrapper">
-      <div class="img-wrapper">
-        <img src="{{imageUrl}}">
-      </div>
-      <input type="text" placeholder="Digite aqui o título da sua dúvida..." name="titulo" [(ngModel)]="post.titulo" >
-      <span class="material-icons"  (click)="cancel()">
-        close
+  <div class="modal">
+    <div class="comment">
+
+      <div class="title-wrapper">
+        <div class="img-wrapper">
+          <img src="{{imageUrl}}">
+        </div>
+        <input type="text" placeholder="Digite aqui o título da sua dúvida..." name="titulo" [(ngModel)]="post.titulo">
+        <span class="material-icons" (click)="cancel()">
+          close
         </span>
-    </div>
-      <textarea placeholder="Digite aqui a sua dúvida... " [(ngModel)]="post.conteudo" name="conteudo"></textarea>
-    <div class="categories">
-      <label for="category">Sobre o que é a sua dúvida? Escolha a categoria que melhor se adequa</label>
-      <span>Categorias</span>
-      <select [(ngModel)]="post.categoria" name="category">
-        <option
-        id="category"
-          *ngFor="let category of categories"
-          [value]="category"
-          ngDefaultControl
-        >{{category}}</option>
-      </select>
-    </div>
+      </div>
+
+      <div class="text-area">
+        <hr>
+        <textarea placeholder="Digite aqui a sua dúvida... " [(ngModel)]="post.conteudo" name="conteudo"></textarea>
+        <hr>
+      </div>
+
+      <div class="categories">
+        <label for="category">Sobre o que é a sua dúvida? Escolha a categoria que melhor se adequa</label>
+        <span>Categorias</span>
+        <select [(ngModel)]="post.categoria" name="category">
+          <option id="category" *ngFor="let category of categories" [value]="category" ngDefaultControl>{{category}}
+          </option>
+        </select>
+      </div>
+      
       <button (click)=sendForm()>Publicar</button>
     </div>
   </div>
-  </form>
+</form>

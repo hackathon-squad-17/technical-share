@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  margin-bottom: 2rem;
 }
 
 .forum-card {
@@ -16,15 +17,22 @@
 
 .post-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 24px;
+}
+
+.post-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .img-wrapper {
   display: inline-block;
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 102px;
+  height: 102px;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -43,24 +51,12 @@ img {
   margin: none;
 }
 
-.post-info p:last-of-type {
-  margin-top: 16px;
-}
-
 .post-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.post-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:center;
+.post-content {
+  font-size: 20px;
+  margin-left: 1.5rem;
 }
-
-span {
-  font-size: 14px;
-  margin-left: 1rem;
-}
-
