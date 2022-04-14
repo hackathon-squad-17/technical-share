@@ -5,9 +5,9 @@
   <div class="skills">
     <p>Escolha sua(s) área(s) de atuação</p>
     <app-categories (onChange)="updateSelectedCategories($event)" [maxSelections]="5"></app-categories>
-    <button (click)="goBack()"><span class="material-icons arrow">arrow_back</span></button>
-    <button (click)="completeRegistration()">
-      Cadastre-se
-    </button>
+    <div class="buttons">
+      <button (click)="goBack()"><span class="material-icons arrow">arrow_back</span></button>
+      <button (click)="completeRegistration()" class="register">Cadastre-se</button>
+    </div>
   </div>
 </section>

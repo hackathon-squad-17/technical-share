@@ -21,7 +21,32 @@ p {
   margin-bottom: 0;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  width: 100%;
+}
+
 button {
+  background-color: transparent;
+  border: none;
+  margin-top: 1em;
+  margin-right: 8em;
+}
+
+span {
+  color : var(--primary);
+  font-size: 30px;
+  border-radius: 16px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 8px 32px;
+  background-color: var(--primary);
+}
+
+button:last-of-type {
   border: none;
   margin-top: 1em;
   color : var(--primary);
@@ -31,9 +56,10 @@ button {
   font-weight: 600;
   padding: 5px 40px;
   background-color: var(--primary);
+  align-self: center;
 }
 
-button:hover {
+button:last-of-type:hover {
   background-color: #ff4400cd;
   transition: 1s background-color;
 }

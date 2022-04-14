@@ -4,7 +4,8 @@ section .progress {
 }
 
 .progress-bar {
-  background: radial-gradient(96.73% 47987.6% at 100% 100%, #C4C4C4 0%, rgba(161, 119, 101, 0) 0%, #FAFAFA 0.01%, #FAFAFA 96.86%, #FF4500 96.88%);
+  background: #FF4500;
+  border-radius: 16px 0 0 16px;
 }
 
 form {
@@ -36,16 +37,16 @@ button {
   background-color: transparent;
   border: none;
   align-self: flex-end;
-  margin-top: 1em;
+  margin-top: 2rem;
 }
 
 span {
   color : var(--primary);
   font-size: 30px;
-  border-radius: 24px;
+  border-radius: 16px;
   color: var(--white);
   font-weight: 600;
-  padding: 5px 20px;
+  padding: 8px 32px;
   background-color: var(--primary);
 }
 
