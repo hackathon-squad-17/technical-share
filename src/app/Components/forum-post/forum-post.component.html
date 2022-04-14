@@ -17,7 +17,7 @@
           </span>
           <p>{{post.comentarios.length}}</p>
       </div>
-      <button a routerLink = '/post/{{post.id}}'>
+      <button a routerLink = '/post/{{post.id}}' *ngIf="!router.url.includes('post')">
           Leia mais
       </button>
     </div>

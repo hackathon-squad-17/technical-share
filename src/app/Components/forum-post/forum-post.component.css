@@ -5,10 +5,11 @@
   justify-content: center;
   align-items: center;
   font-size: 22px;
+  margin-bottom: 3rem;;
 }
 
 .forum-card {
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  box-shadow: var(--box-shadow);
   padding: 40px;
   border-radius: 16px;
   width: 950px;

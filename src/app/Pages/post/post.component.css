@@ -2,7 +2,26 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 1.5rem;
   margin-top: 4rem;
 }
 
+.gap {
+  margin-top: 2rem;
+}
+
+button {
+  width: 280px;
+  color:var(--light-white);
+  border: none;
+  background-color: var(--primary);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 24px;
+  align-self: center;
+  margin-top: 4rem;
+}
+
+button:hover {
+  background-color: #ff4400cd;
+  transition: 1s
+}

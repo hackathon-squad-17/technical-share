@@ -2,6 +2,9 @@
 <main *ngIf = 'idPost' >
   <app-forum-post [post]='idPost'></app-forum-post>
   <app-comment-creator [idPost]="idPost.id"></app-comment-creator>
-  <app-comment *ngFor='let comentario of idPost.comentarios' [comentario]='comentario'></app-comment>
+  <div class="gap">
+    <app-comment *ngFor='let comentario of idPost.comentarios' [comentario]='comentario'></app-comment>
+  </div>
+  <button routerLink="/forum">Voltar ao fórum</button>
 </main>
 <app-footer></app-footer>

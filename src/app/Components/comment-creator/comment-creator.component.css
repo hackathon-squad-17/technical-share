@@ -1,13 +1,14 @@
 
 .comment {
   display: grid;
-  grid-template-columns: 102px 1fr 100px;
+  grid-template-columns: 102px 1fr;
   gap: 20px;
   justify-content: center;
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
-  max-width: 900px;
+  box-shadow: var(--box-shadow);
   padding: 40px;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
+  background-color: #EBEBF2;
+  width: 950px;
 }
 
 .img-wrapper {
@@ -30,6 +31,8 @@ textarea {
   min-width: 520px;
   align-self: center;
   font-size: 18px;
+  background-color: #EBEBF2;
+  flex-grow: 1;
 }
 
 button {
@@ -37,11 +40,11 @@ button {
   background-color: var(--primary);
   border: none;
   border-radius: 16px;
-  width: 100px;
-  height: 30px;
   align-self: center;
   justify-content: center;
   font-size: 18px;
+  padding: 4px 24px;
+  justify-content: flex-end;
 }
 
 button:hover {
@@ -51,4 +54,9 @@ button:hover {
 
 form {
   display: flex;
+  gap:15px;
+}
+
+textarea:focus {
+  outline: none;
 }

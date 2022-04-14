@@ -12,7 +12,7 @@
     </section>
 
     <section class="posts">
-      <app-forum-post *ngFor = "let post of filteredPosts" [post]="post"></app-forum-post>
+      <app-forum-post *ngFor = "let post of filteredPosts" [post]="post" class="app-post"></app-forum-post>
       <div *ngIf="noResults" class="no-results">
         <img src="assets/img/laranjo.png">
         <p>Desculpe, ainda não possuímos nenhuma publicação nessa categoria. Tente um novo termo ou <span>comece uma nova discussão.</span></p>

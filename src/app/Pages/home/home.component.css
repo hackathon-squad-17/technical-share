@@ -97,7 +97,7 @@ h3 span {
   gap: 44px;
   background-color: white;
   color: var(--black);
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  box-shadow: var(--box-shadow);
   border-radius: 36px;
 }
 

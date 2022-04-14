@@ -18,6 +18,10 @@
       <h3>Conheça mais sobre {{user.nome}}</h3>
       <p>Sit odio natoque vitae risus id sem morbi elit porttitor. Velit ultrices tellus risus pretium vitae urna. Risus ornare quis sit eget eu. Duis sagittis venenatis, accumsan eu varius. Mattis condimentum diam sit elit, risus, nullam mauris morbi urna. Nisi in tempus, mi, nullam lorem feugiat id laoreet. </p>
     </div>
+    <div class="contact-info">
+      <h3>Contato</h3>
+      <p>{{user.email}}</p>
+    </div>
   </section>
   <button *ngIf="checkUser"><a (click)="logout()">Sair</a></button>
   <button *ngIf="!checkUser"><a href = "mailto:{{user.email}}">Entrar em contato</a></button>

@@ -10,12 +10,12 @@
   --black: #343434;
   --dark-black: #252525;
   --secondary: #36357E;
+  --box-shadow: 10px 10px 20px rgba(54, 53, 126, 0.16);
 }
 
 html {
   font-family: var(--montserrat);
   background-color: var(--white);
-
 }
 
 .owl-carousel {

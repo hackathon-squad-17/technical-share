@@ -2,7 +2,7 @@
   display: flex;
   justify-content: row;
   gap: 42px;
-  margin: 0 4rem;
+  margin: 0 4rem 0 5rem;
 }
 
 h4 {
@@ -20,7 +20,7 @@ h3 {
 
 .new-post {
   background-color: #EBEBF2;
-  box-shadow: drop-shadow(5px 12px 18px rgba(255, 206, 188, 0.2));
+  box-shadow: var(--box-shadow);
   padding: 20px 40px;
   border-radius: 16px;
   font-size: 24px;
@@ -45,8 +45,8 @@ button {
 }
 
 button:hover {
-  background-color: #FFEAE2;
-  color: var(--primary);
+    background-color: #ff4400cd;
+    transition: 1s background-color;
 }
 
 span {

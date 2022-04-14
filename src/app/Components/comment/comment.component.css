@@ -8,8 +8,8 @@
 }
 
 .forum-card {
-  width: 900px;
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  width: 950px;
+  box-shadow: var(--box-shadow);
   padding: 40px;
   border-radius: 16px;
 }

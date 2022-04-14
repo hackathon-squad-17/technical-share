@@ -50,7 +50,7 @@
       <img src="assets/img/detalhe-titulo.png">
       <h3>Conheça os nossos consultores</h3>
     </div>
-    <div class="profiles container slide-wrapper" >
+    <div class="profiles slide-wrapper" >
         <app-card-profile *ngFor = "let user of filteredUsers" class="slide" [user]="user"></app-card-profile>
     </div>
     <div *ngIf="noResults" class="no-results">

@@ -1,7 +1,7 @@
 .slide {
   position: relative;
   z-index: 2;
-  margin: 2rem 1rem;
+  margin: 2rem 1.5rem;
 }
 
 .img-wrapper img {
@@ -21,7 +21,7 @@
   font-weight: 300;
   width: 100%;
   background-color: white;
-  box-shadow: 5px 12px 18px rgba(255, 206, 188, 0.2);
+  box-shadow: var(--box-shadow);
   border-radius: 0 0 16px 16px;
 }
 
