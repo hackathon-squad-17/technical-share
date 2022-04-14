@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from 'src/app/Models/post.model';
 import { ForumService } from 'src/app/Services/forum.service';
 import { UserService } from 'src/app/Services/user.service';
@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./post-creator.component.css']
 })
 export class PostCreatorComponent implements OnInit {
+  @Output() onCancelClick:EventEmitter<null> = new EventEmitter();
   post:Post = new Post();
   imageUrl: string = '';
   categories:[] = [];
@@ -33,4 +34,8 @@ export class PostCreatorComponent implements OnInit {
     window.location.reload();
   }
 
+  cancel(){
+    this.onCancelClick.emit()
+  }
 }
+

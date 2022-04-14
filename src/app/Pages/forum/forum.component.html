@@ -1,3 +1,6 @@
+<app-post-creator *ngIf = "showModal"  (onCancelClick)="hidingModal()"></app-post-creator>
+
+
 <app-header></app-header>
 <app-search-bar placeholder="Pesquise por títulos ou conteúdos" (onSearch)="searchPosts($event)"></app-search-bar>
 
@@ -5,7 +8,7 @@
   <div class="posts-wrapper">
     <section class="new-post">
       <h4><span>Tem alguma dúvida? </span>Inicie uma discussão no nosso fórum!</h4>
-      <button>Publique no fórum</button>
+      <button (click)="showingModal()">Publique no fórum</button>
     </section>
 
     <section class="posts">

@@ -50,4 +50,15 @@ export class ForumComponent implements OnInit {
       this.filteredPosts = this.posts
     }
   }
+
+
+  showModal = false;
+
+  showingModal(){
+    this.showModal = true;
+  }
+
+  hidingModal(){
+    this.showModal = false;
+  }
 }
