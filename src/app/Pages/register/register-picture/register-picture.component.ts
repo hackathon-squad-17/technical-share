@@ -11,6 +11,8 @@ export class RegisterPictureComponent implements OnInit {
   @Output() onForward = new EventEmitter<any>();
   @Output() onBackward = new EventEmitter<any>();
   imageSrc: string='';
+  warning: string='';
+  maxSize:boolean = false;
 
   constructor(private registrationService: RegistrationService) { }
 
@@ -20,15 +22,23 @@ export class RegisterPictureComponent implements OnInit {
   }
 
   previewURL(event:any) {
+    let maxfilesize = 1024 * 1024,  // 1 Mb
+    filesize = event.target.files[0].size
+
+    if ( filesize > maxfilesize ){
+    this.warning = "O arquivo é muito grande. Por favor, escolha outra foto."
+    this.maxSize = true;
+  } else {
     if (event.target.files && event.target.files[0]) {
-        var reader = new FileReader();
+      var reader = new FileReader();
 
-        reader.onload = (event:any) => {
-            this.imageSrc = event.target.result;
-        }
+      reader.onload = (event:any) => {
+          this.imageSrc = event.target.result;
+      }
 
-        reader.readAsDataURL(event.target.files[0]);
-    }
+      reader.readAsDataURL(event.target.files[0]);
+  }
+  }
   }
 
   goBack(imageInput:any){

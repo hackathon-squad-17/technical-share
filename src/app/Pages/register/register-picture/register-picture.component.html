@@ -9,7 +9,7 @@
                type="file"
                (change)="previewURL($event)"
                accept="image/*">
-
+        <div class="warning" *ngIf="maxSize">{{warning}}</div>
         <img id="profile" [src]="imageSrc"/>
     </div>
     <div class="buttons">
