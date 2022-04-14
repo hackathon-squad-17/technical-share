@@ -20,6 +20,7 @@ footer img:hover {
     margin: 3rem 0;
     gap: 2rem;
     justify-content: center;
+    gap: 1rem;
   }
 
   footer img {

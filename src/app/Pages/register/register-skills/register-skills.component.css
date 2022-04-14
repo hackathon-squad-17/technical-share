@@ -47,7 +47,7 @@ span {
   background-color: var(--primary);
 }
 
-.register{
+.register {
   border: none;
   color : var(--primary);
   font-size: 28px;
@@ -61,4 +61,28 @@ span {
 button:last-of-type:hover, span:last-of-type:hover {
   background-color: #ff4400cd;
   transition: 1s background-color;
+}
+
+@media screen and (max-width: 800px) {
+  section .progress  {
+    width: 50%;
+  }
+
+  .skills {
+    width: 85%;
+  }
+  .skills p {
+    margin: 0 0 1rem 0;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .register {
+    order: -1;
+  }
+
 }
