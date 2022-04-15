@@ -44,3 +44,22 @@ button {
   bottom: 0;
   right: 0;
 }
+
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper, button {
+    margin: 2rem;
+  }
+
+  p, button  {
+    width: 100%;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
