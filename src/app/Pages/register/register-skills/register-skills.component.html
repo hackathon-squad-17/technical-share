@@ -1,13 +1,13 @@
 <section>
   <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
   <div class="skills">
     <p>Escolha sua(s) área(s) de atuação</p>
     <app-categories (onChange)="updateSelectedCategories($event)" [maxSelections]="5"></app-categories>
     <div class="buttons">
       <button (click)="goBack()"><span class="material-icons arrow">arrow_back</span></button>
-      <button (click)="completeRegistration()" class="register">Cadastre-se</button>
+      <button (click)="goForward()"><span class="material-icons arrow">arrow_forward</span></button>
     </div>
   </div>
 </section>

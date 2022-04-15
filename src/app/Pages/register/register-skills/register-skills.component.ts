@@ -13,6 +13,7 @@ export class RegisterSkillsComponent implements OnInit {
   constructor(private registrationService: RegistrationService, private router: Router) { }
   selectedCategories:string[] = [];
   @Output() onBackward = new EventEmitter<any>();
+  @Output() onForward = new EventEmitter<any>();
 
   ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -27,8 +28,8 @@ export class RegisterSkillsComponent implements OnInit {
     this.onBackward.emit();
   }
 
-  completeRegistration(){
-    this.registrationService.setUserAbilities(this.selectedCategories)
-    this.registrationService.completeRegistration();
+  goForward(){
+    this.registrationService.setUserAbilities(this.selectedCategories);
+    this.onForward.emit();
   }
 }

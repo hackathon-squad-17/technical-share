@@ -1,0 +1,16 @@
+<section>
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="about">Nos conte um pouco mais sobre você</label>
+      <p class="small-text">Não se preocupe, você poderá editar isso mais tarde.</p>
+      <textarea placeholder="Sobre mim" name="about" id="about" [(ngModel)]="userAbout"></textarea>
+    </div>
+    <div class="buttons">
+      <button (click)="goBack()"><span class="material-icons arrow">arrow_back</span></button>
+      <button (click)="completeRegistration()" class="register">Cadastre-se</button>
+    </div>
+  </form>
+</section>

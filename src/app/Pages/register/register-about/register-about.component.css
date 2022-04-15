@@ -1,0 +1,114 @@
+section .progress {
+  width: 25%;
+  margin: 2.5rem auto;
+}
+
+.progress-bar {
+  background: radial-gradient(96.73% 47987.6% at 100% 100%, rgba(161, 119, 101, 0) 26.03%, #F69A12 26.04%, #E9783A 50%, #E9783A 65.1%, #FF4500 84.9%);
+  border-radius: 16px 0 0 16px;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+}
+
+label {
+  margin-bottom: .2rem;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.small-text {
+  text-align: center;
+  font-size: 16px;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.small-text:hover {
+  background-color: #fff;
+}
+
+textarea {
+  resize: none;
+  width: 500px;
+  height: 200px;
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 24px;
+  font-size: 18px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 30% 50% 30%;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  align-self: flex-end;
+  margin-top: 1em;
+}
+
+.buttons span {
+  color : var(--primary);
+  font-size: 30px;
+  border-radius: 16px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 8px 32px;
+  background-color: var(--primary);
+}
+
+.register {
+  border: none;
+  color : var(--primary);
+  font-size: 28px;
+  border-radius: 16px;
+  color: var(--white);
+  font-weight: 600;
+  padding: 5px 40px;
+  background-color: var(--primary);
+}
+
+.buttons button:last-of-type:hover, span:last-of-type:hover {
+  background-color: #ff4400cd;
+  transition: 1s background-color;
+}
+
+@media screen and (max-width: 800px) {
+  section .progress  {
+    width: 50%;
+  }
+  form {
+    width: 85%;
+  }
+
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .register {
+    order: -1;
+  }
+}

@@ -29,6 +29,7 @@ import { RegisterPictureComponent } from './Pages/register/register-picture/regi
 import { UserProfileComponent } from './Pages/user-profile/user-profile.component';
 import { ProfileSearchComponent } from './Pages/search/profile-search/profile-search.component';
 import { HelpComponent } from './Pages/help/help.component';
+import { RegisterAboutComponent } from './Pages/register/register-about/register-about.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { HelpComponent } from './Pages/help/help.component';
     UserProfileComponent,
     ProfileSearchComponent,
     HelpComponent,
+    RegisterAboutComponent,
   ],
   imports: [
     BrowserModule,
