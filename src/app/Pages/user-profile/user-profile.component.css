@@ -82,3 +82,52 @@ button {
 a {
   color: white;
 }
+
+@media screen and (max-width: 800px) {
+  section {
+    width: 95%;
+    padding: 16px;
+    box-shadow: none;
+  }
+
+  .img-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name-title {
+    font-size: 36px;
+  }
+
+  .name-title h2 {
+    font-size: 30px;
+  }
+
+  .name-title h4{
+    font-size: 24px;
+  }
+
+  h3 {
+    color: #343434;
+    font-size: 28px;
+    margin-top: 2rem;
+  }
+
+  .abilities {
+    gap: 16px;
+  }
+
+  .ability {
+    font-size: 20px;
+    padding: 8px 28px;
+  }
+
+  .contact-info {
+    font-size: 20px;
+  }
+
+  button {
+    width: 80%;
+    margin-top: 3rem;
+  }
+}
