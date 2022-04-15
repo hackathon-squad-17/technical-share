@@ -1,9 +1,15 @@
 <header class="container">
   <div class="logo">
-    <a routerLink="{{isLoggedIn == true ? '/profiles' : '/home'}}"><h1>Technical <span>Share</span></h1></a>
+    <a routerLink="{{isLoggedIn == true ? '/profiles' : '/'}}"><h1>Technical <span>Share</span></h1></a>
   </div>
   <div class="header-wrapper">
-    <ul>
+    <ul *ngIf="isLoggedIn == false">
+      <li class="link"><a href="#como-funciona">Como funciona</a></li>
+      <li class="link"><a href="#sobre">Sobre</a></li>
+      <li><a routerLink="{{getUserProfileLink()}}" class="login" (click)="checksLogin()">{{buttonState}}</a></li>
+    </ul>
+
+    <ul *ngIf="isLoggedIn == true">
       <li class="link"><a routerLink="/help">Ajuda</a></li>
       <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/login'}}" class="link" (click)="checksLogin()">Fórum</a></li>
       <li><a routerLink="{{isLoggedIn == true ? '/profiles' : '/login'}}" class="link" (click)="checksLogin()">Consultores</a></li>

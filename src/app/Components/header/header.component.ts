@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   login:string = ''
   showingMenu:boolean = false
 
-   constructor(private userService: UserService, private router: Router) { }
+   constructor(private userService: UserService, public router: Router) { }
 
   ngOnInit(): void {
     this.checksLogin();
