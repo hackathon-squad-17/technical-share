@@ -32,9 +32,17 @@ p {
   gap: 2rem;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
 button {
   background-color: transparent;
   border: none;
+  align-self: flex-end;
+  margin-top: 1em;
 }
 
 span {
@@ -47,21 +55,6 @@ span {
   background-color: var(--primary);
 }
 
-.register {
-  border: none;
-  color : var(--primary);
-  font-size: 28px;
-  border-radius: 16px;
-  color: var(--white);
-  font-weight: 600;
-  padding: 5px 40px;
-  background-color: var(--primary);
-}
-
-button:last-of-type:hover, span:last-of-type:hover {
-  background-color: #ff4400cd;
-  transition: 1s background-color;
-}
 
 @media screen and (max-width: 800px) {
   section .progress  {
