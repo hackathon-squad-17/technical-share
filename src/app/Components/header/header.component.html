@@ -10,7 +10,23 @@
       <li><a routerLink="{{getUserProfileLink()}}" class="login" (click)="checksLogin()">{{buttonState}}</a></li>
     </ul>
   </div>
-  <div class="burger">
-    ☰
+  <div class="mobile-menu">
+    <div class="burger" (click)="showMenu()">
+      ☰
+    </div>
+    <div class="burger-links" *ngIf="showingMenu">
+      <span class="material-icons" (click)="closeMenu()">
+        close
+        </span>
+        <ul>
+        <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/profile/{{login}}'}}" class="link" (click)="checksLogin()">Perfil</a></li>
+        <li><a routerLink="{{isLoggedIn == true ? '/profiles' : '/login'}}" class="link" (click)="checksLogin()">Consultores</a></li>
+        <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/login'}}" class="link" (click)="checksLogin()">Ajuda</a></li>
+        <li><a routerLink="/help" class="link">Fórum</a></li>
+      </ul>
+      <div class="footer">
+        <app-footer></app-footer>
+      </div>
+    </div>
   </div>
 </header>
