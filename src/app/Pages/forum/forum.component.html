@@ -2,7 +2,9 @@
 
 
 <app-header></app-header>
-<app-search-bar placeholder="Pesquise por títulos ou conteúdos" (onSearch)="searchPosts($event)"></app-search-bar>
+<div class="search">
+  <app-search-bar placeholder="Pesquise por títulos ou conteúdos" (onSearch)="searchPosts($event)"></app-search-bar>
+</div>
 
 <main class="page-grid">
   <div class="posts-wrapper">

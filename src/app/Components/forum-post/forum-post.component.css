@@ -107,3 +107,21 @@ button:hover {
 h4 {
   font-size: 32px;
 }
+
+@media screen and (max-width: 800px) {
+  .forum-card {
+    width: 100%;
+  }
+
+  .img-wrapper {
+    display: none;
+  }
+
+  .post-content  {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+}

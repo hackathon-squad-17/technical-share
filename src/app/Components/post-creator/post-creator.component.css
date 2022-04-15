@@ -121,3 +121,20 @@ button:hover {
   transition: 1s background-color;
 }
 
+@media screen and (max-width: 800px) {
+  .comment {
+    height: 90%;
+    width: 90%;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .img-wrapper {
+    display: none;
+  }
+
+  .categories span {
+    display: none
+  }
+}
+
