@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ForumComponent } from './Pages/forum/forum.component';
+import { HelpComponent } from './Pages/help/help.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { PostComponent } from './Pages/post/post.component';
@@ -41,6 +42,9 @@ const routes: Routes = [
   {
     path:'search',
     component: ProfileSearchComponent
+  }, {
+    path: 'help',
+    component: HelpComponent
   }
 ];
 

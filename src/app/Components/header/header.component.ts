@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
   buttonState:string = 'Entrar'
   login:string = ''
+  showingMenu:boolean = false
+
    constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
@@ -35,5 +37,13 @@ export class HeaderComponent implements OnInit {
     } else{
       return '/login'
     }
+  }
+
+  showMenu(){
+    this.showingMenu = true;
+  }
+
+  closeMenu(){
+    this.showingMenu = false;
   }
 }

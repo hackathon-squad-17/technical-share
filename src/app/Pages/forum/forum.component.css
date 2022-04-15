@@ -77,3 +77,37 @@ span {
   text-align: center;
   width: 600px;
 }
+
+@media screen and (max-width: 800px) {
+  .search {
+    margin-top: 3rem;
+  }
+
+  .page-grid {
+    margin: 2rem 1rem;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  .new-post {
+    width: 100%;
+    background-color: #FAFAFA;
+    text-align: center;
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .posts-wrapper {
+    min-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .categorias {
+    display: none;
+  }
+}

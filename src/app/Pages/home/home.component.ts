@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public innerWidth: any;
+
   cards = [
     {
       icon: 'search',
@@ -21,10 +23,11 @@ export class HomeComponent implements OnInit {
     }
   ];
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
   }
 
 }

@@ -60,3 +60,37 @@ form {
 textarea:focus {
   outline: none;
 }
+
+
+@media screen and (max-width: 800px) {
+  .img-wrapper {
+    display: none;
+  }
+
+  textarea {
+    min-width: 0%;
+    width: 100%;
+    flex-grow: 0;
+  }
+
+  .comment {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  button {
+    justify-content: flex-start;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+}

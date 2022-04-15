@@ -55,3 +55,12 @@ span {
   padding: 8px 32px;
   background-color: var(--primary);
 }
+
+@media screen and (max-width: 800px) {
+  section .progress  {
+    width: 50%;
+  }
+  form {
+    width: 85%;
+  }
+}

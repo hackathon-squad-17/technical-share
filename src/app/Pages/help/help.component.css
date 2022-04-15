@@ -1,0 +1,65 @@
+
+main {
+  position: relative;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 4rem 5rem;
+  align-items: center;
+}
+
+p {
+  width: 522px;
+  font-size: 28px;
+}
+
+span {
+  color: var(--primary)
+}
+
+
+button {
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  height: 80px;
+  width: 380px;
+  font-size: 28px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper, button {
+    margin: 2rem;
+  }
+
+  p, button  {
+    width: 100%;
+  }
+
+  .footer {
+    position: relative;
+  }
+}

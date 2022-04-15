@@ -1,7 +1,7 @@
 .slide {
   position: relative;
   z-index: 2;
-  margin: 2rem 1.5rem;
+  margin: 2rem 2rem;
 }
 
 .img-wrapper img {
@@ -78,4 +78,21 @@ button:hover {
 
 a {
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .img-wrapper img {
+    height: 200px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .info-wrapper {
+    border-radius: 0 0 16px 16px ;
+    position: relative;
+  }
+
+  .slide {
+    margin: 2rem 0;
+    width: 100%;
+  }
 }

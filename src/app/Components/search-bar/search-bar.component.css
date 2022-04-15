@@ -53,10 +53,13 @@ button {
   .search-box {
     width: 100%;
     margin: 0;
+    max-width: 100%;
   }
 
   .search-box input {
     width: 100%;
     margin: 0;
+    font-size: 20px;
   }
+
 }

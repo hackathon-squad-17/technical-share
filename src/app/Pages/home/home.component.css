@@ -94,7 +94,7 @@ h3 span {
   justify-content: center;
   align-items: center;
   border: none;
-  gap: 44px;
+  gap: 36px;
   background-color: white;
   color: var(--black);
   box-shadow: var(--box-shadow);
@@ -118,7 +118,6 @@ h3 span {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
 }
 
 .mentoring-title {
@@ -227,12 +226,17 @@ h3 span {
 }
 
 @media screen and (max-width: 800px) {
-  .main-img {
+  .main-img img, .card-company:first-of-type img, .img-fcamara {
     display: none;
   }
 
+  .intro {
+    margin-top: 2.5em;
+  }
+
   .intro-title {
-    margin: 3rem 2rem;
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,28 +244,48 @@ h3 span {
 
   .intro {
     font-size: 22px;
+    justify-content: center;
   }
 
   h2{
     width: 100%;
+    font-size: 34px;
   }
 
-  h3 {
-    font-size: 32px;
+  button {
+    margin-top: 0;
+  }
+
+  .how-it-works-title {
+    gap: 1.5rem;
+  }
+
+  .cards {
+    gap: 1.5rem;
+    margin: 0 auto;
   }
 
   .card {
     height: 100%;
-    width: 100%;
+    width: 70%;
+    padding: 1rem;
+    gap: 8px;
     padding: 1rem;
   }
 
-  .mentoring-title h3 {
-    font-size: 26px;
-    margin: 5rem 2rem 2rem 2rem;
+  .mentoring-title {
+    margin: 5rem auto;
+  }
+
+  .mentoring-title h3,
+  .mentoring-title span{
+    font-size: 32px;
+    width: 90%;
+    margin: 0;
   }
 
   .mentoring-title img {
+    margin-top: 2rem;
     width: 90%;
   }
 
@@ -274,24 +298,42 @@ h3 span {
     flex-direction: column;
     justify-content: center;
     font-size: 24px;
-    margin: 2rem;
+    margin: 1rem ;
   }
 
-  .fcamara {
-    margin: 0;
-    padding: 4rem 2rem;
-    font-size: 20px;
+  .categories h3 {
+    margin-top: 0;
   }
 
-  .technical-share,
-  .technical-share {
-    margin: 0;
-    padding: 1rem 2rem;
+  .mentoring button {
+    margin-top: 2rem;
   }
 
-  .technical-share h3 {
-    margin: 0;
+  .companies {
+    margin-top: 4rem;
   }
+
+  .card-company {
+    margin: 1rem auto;
+    padding: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 90%;
+  }
+
+  .card-company h4 {
+    font-size: 36px;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  .card-company p {
+    font-size: 18px;
+
+  }
+
   .container {
     margin: 0;
   }

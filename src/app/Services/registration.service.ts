@@ -18,6 +18,7 @@ export class RegistrationService {
   imageInput:any;
   userRole: string = '';
   userAbilities: string[] = [];
+  userAbout:string = ''
 
   constructor(private http:HttpClient, private router: Router, private imageService: ImageService, private userService: UserService) { }
 
@@ -37,6 +38,10 @@ export class RegistrationService {
     this.userAbilities = userAbilities;
   }
 
+  setUserAbout(userAbout:string){
+    this.userAbout = userAbout;
+  }
+
   getRegisteringUser(){
     return this.userRegisterInfo
   }
@@ -51,6 +56,10 @@ export class RegistrationService {
 
   getUserAbilities(){
     return this.userAbilities
+  }
+
+  getUserAbout(){
+    return this.userAbout
   }
 
   registerUserInfo(){
@@ -78,6 +87,13 @@ export class RegistrationService {
     })
   }
 
+  registerUserAbout(){
+    return this.http.post(`${environment.apiRoot}usuarios/sobre-mim`, {
+      login: this.userRegisterInfo.login,
+      sobreMim: this.userAbout
+    })
+  }
+
   registrationIsValid(){
     // TODO Validar formulário
     return true
@@ -93,10 +109,13 @@ export class RegistrationService {
         this.registerUserRole().subscribe(() => {
           console.log("user role is valid")
           this.registerUserAbilities().subscribe(() => {
-            console.log("userabilities is valid")
-            this.userService.login({loginOuEmail: this.userRegisterInfo.login, senha: this.userRegisterInfo.password}).subscribe(()=>{
-              this.router.navigate(['/profiles'])
-            });
+            console.log("user abilities is valid")
+            this.registerUserAbout().subscribe(() => {
+              console.log("user about is valid")
+              this.userService.login({loginOuEmail: this.userRegisterInfo.login, senha: this.userRegisterInfo.password}).subscribe(()=>{
+                this.router.navigate(['/profiles'])
+              });
+            })
           })
         })
       })

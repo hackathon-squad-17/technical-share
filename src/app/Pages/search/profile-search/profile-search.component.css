@@ -26,3 +26,17 @@
   text-align: center;
   width: 400px;
 }
+
+@media screen and (max-width: 800px) {
+  .search {
+    margin-top: 2rem;
+  }
+
+  .slide-wrapper {
+    gap: 8px;
+  }
+
+  .slide {
+    width: 70%;
+  }
+}
