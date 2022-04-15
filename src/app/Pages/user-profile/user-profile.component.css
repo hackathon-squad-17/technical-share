@@ -60,9 +60,9 @@ h3 {
 }
 
 .ability {
-  color: var(--primary);
-  background-color: #FFEAE2;
-  padding: 12px 48px;
+  background-color: #EBEBF2;
+  color: #36357E;
+  padding: 8px 38px;
   font-size: 24px;
   border-radius: 16px;
 }
