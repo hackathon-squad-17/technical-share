@@ -4,7 +4,7 @@
   </div>
   <div class="header-wrapper">
     <ul>
-      <li class="link">Ajuda</li>
+      <li class="link"><a routerLink="/help">Ajuda</a></li>
       <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/login'}}" class="link" (click)="checksLogin()">Fórum</a></li>
       <li><a routerLink="{{isLoggedIn == true ? '/profiles' : '/login'}}" class="link" (click)="checksLogin()">Consultores</a></li>
       <li><a routerLink="{{getUserProfileLink()}}" class="login" (click)="checksLogin()">{{buttonState}}</a></li>
