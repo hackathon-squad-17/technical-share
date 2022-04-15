@@ -4,7 +4,7 @@
     <section class="intro">
       <div class="intro-title">
         <h2>A Technical Share é uma plataforma de <b>conexão</b> e troca de <b>conhecimento</b>.</h2>
-        <button routerLink="/login">Comece agora</button>
+        <button routerLink="{{isLoggedIn == true ? '/profiles' : '/register'}}" (click)="checksLogin()" >Comece agora</button>
       </div>
       <div class="main-img">
         <img src="assets/img/card-home.png">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-        <button routerLink="/login">Conheça a plataforma</button>
+      <button routerLink="{{isLoggedIn == true ? '/profiles' : '/register'}}" (click)="checksLogin()" >Comece agora</button>
     </section>
 
     <div class="companies">

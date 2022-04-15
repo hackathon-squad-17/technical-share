@@ -1,6 +1,6 @@
 <header class="container">
   <div class="logo">
-    <a routerLink="/"><h1>Technical <span>Share</span></h1></a>
+    <a routerLink="{{isLoggedIn == true ? '/profiles' : '/home'}}"><h1>Technical <span>Share</span></h1></a>
   </div>
   <div class="header-wrapper">
     <ul>
