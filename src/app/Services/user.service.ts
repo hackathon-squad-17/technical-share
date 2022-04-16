@@ -62,6 +62,6 @@ export class UserService {
 
   editUser(user:User){
     console.log(user)
-    return this.http.put(`${environment.apiRoot}usuarios/atualiza-usuario`, user)
+    return this.http.put(`${environment.apiRoot}usuarios/atualizar-usuario`, user)
   }
 }
