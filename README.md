@@ -9,10 +9,10 @@
 
 <p> Olá, nós somos a squad 17 do Programa de Formação - Season 3, promovido pela FCamara. Ao longo de 15 dias tivemos a oportunidade de desenvolver uma aplicação que busca facilitar a conexão entre os #SangueLaranja e encorajar a troca de conhecimento entre os colaboradores. A nossa plataforma permite que os usuários interajam por meio de um fórum, onde é possível fazer e responder perguntas. Existe também a possibilidade de visualizar os perfis que mais te interessam e agendar uma conversa por meio do email. </p>
 
-<br/>
-<h2 align="center"><a href="https://technical-share.vercel.app/">[Clique aqui para ver o resultado do projeto]</a></h2>
 
-### 💡 Caso não queira se cadastrar na plataforma, você pode usar o login de teste:
+<h2 align="center"><a href="https://technical-share.vercel.app/">[Clique aqui para ver o resultado do projeto]</a></h2>
+<br/>
+#### 💡 Caso não queira se cadastrar na plataforma, você pode usar o login de teste:
 | nome do usuário: fsantos
 | senha: 1234 |
 
