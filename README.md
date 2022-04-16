@@ -12,9 +12,8 @@
 
 <h2 align="center"><a href="https://technical-share.vercel.app/">[Clique aqui para ver o resultado do projeto]</a></h2>
 <br/>
-#### 💡 Caso não queira se cadastrar na plataforma, você pode usar o login de teste:
-| nome do usuário: fsantos
-| senha: 1234 |
+<h3 align="center"> 💡 Caso não queira se cadastrar na plataforma, você pode usar o login de teste: </h3>
+           <p align="center"> | nome do usuário: fsantos | senha: 1234 | </p>
 
 ## 📸 Screenshots
 ![image](https://user-images.githubusercontent.com/71384460/163653037-ea3ff93a-f3f7-442b-b869-a292cd211c0f.png)
