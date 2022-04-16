@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" 
 </p>
 
-<p> Olá, nós somos a squad 17 do Programa de Formação - Season 3, promovido pela FCamara. Ao longo de 15 dias tivemos a oportunidade de desenvolver uma aplicação que busca facilitar a conexão entre os #SangueLaranja e encorajar a troca de conhecimento entre os colaboradores. A nossa plataforma permite os usuários interajam por meio de um fórum, onde é possível fazer e responder perguntas. Existe também a possibilidade de visualizar os perfis que mais te interessam e agendar uma conversa por meio do email. </p>
+<p> Olá, nós somos a squad 17 do Programa de Formação - Season 3, promovido pela FCamara. Ao longo de 15 dias tivemos a oportunidade de desenvolver uma aplicação que busca facilitar a conexão entre os #SangueLaranja e encorajar a troca de conhecimento entre os colaboradores. A nossa plataforma permite que os usuários interajam por meio de um fórum, onde é possível fazer e responder perguntas. Existe também a possibilidade de visualizar os perfis que mais te interessam e agendar uma conversa por meio do email. </p>
 
 <h2 align="center"><a href="https://technical-share.vercel.app/">[Clique aqui para ver o resultado do projeto]</a></h2>
 
@@ -19,7 +19,7 @@
 
 ## 🚀 Funcionalidades
 - [x] Fórum 
-- [x] Página de perfil do usuário!
+- [x] Página de perfil do usuário
 - [x] Filtro de posts/usuários por habilidades
 - [x] Busca de posts por título e/ou conteúdo
 - [x] Busca de perfil por nome e/ou área de atuação 
