@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.userService.login(this.loginDetails).subscribe((response) => {
-      this.loginError = response.error
+      this.loginError = 'Usuário e/ou senha incorretos'
     }
     )
   }

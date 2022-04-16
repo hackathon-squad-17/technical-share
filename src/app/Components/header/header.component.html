@@ -25,7 +25,7 @@
         close
         </span>
         <ul>
-        <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/profile/{{login}}'}}" class="link" (click)="checksLogin()">Perfil</a></li>
+        <li><a routerLink="{{isLoggedIn == true ? '/profile/{{login}}' : '/login'}}" class="link" (click)="checksLogin()">Perfil</a></li>
         <li><a routerLink="{{isLoggedIn == true ? '/profiles' : '/login'}}" class="link" (click)="checksLogin()">Consultores</a></li>
         <li><a routerLink="{{isLoggedIn == true ? '/forum' : '/login'}}" class="link" (click)="checksLogin()">Fórum</a></li>
         <li><a routerLink="/help" class="link">Ajuda</a></li>
