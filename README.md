@@ -46,4 +46,4 @@ Antes de começar, é necessário que você tenha instalado na sua máquina as s
 - [Diogo Mendonça](https://www.linkedin.com/in/mendoncadiogo/) | UX Designer
 
 ## 📎 Links importantes
-[Vídeo de funcionalidades](https://www.youtube.com/watch?v=9hT5PXutAII&ab_channel=VivianOliveira) • [Artigo](https://medium.com/@juliana.ros/techinical-share-plataforma-de-aprendizado-e-crescimento-m%C3%BAtuo-para-profissionais-da-fcamara-a3f7ed93e8a0) • [Protótipo](https://www.figma.com/file/b1r7hsTAaQNJwr8jLNYnZf/Squad-17---Technical-Share?node-id=743%3A21517)
+[Vídeo de funcionalidades](https://www.youtube.com/watch?v=9hT5PXutAII&ab_channel=VivianOliveira) • [Artigo](https://medium.com/@juliana.ros/techinical-share-plataforma-de-aprendizado-e-crescimento-m%C3%BAtuo-para-profissionais-da-fcamara-a3f7ed93e8a0) • [Protótipo](https://www.figma.com/file/b1r7hsTAaQNJwr8jLNYnZf/Squad-17---Technical-Share?node-id=743%3A21517) • [Vídeo Pitch](https://www.youtube.com/watch?v=9WcrornzdsE&ab_channel=VivianOliveira)
